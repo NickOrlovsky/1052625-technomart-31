@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -17,7 +19,7 @@
         <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт">
       </a>
       <form class="header__search" action="https://echo.htmlacademy.ru" method="get">
-        <input type="search" name="search" placeholder="Поиск">
+        <input type="search" name="search" placeholder="Поиск:" class="header__search-field">
       </form>
       <p class="header__bookmarks">
         <a href="#" class="header__link">Закладки: 0</a>
@@ -39,8 +41,8 @@
         г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
       </p>
       <p class="header__sign">
-        <a href="#" class="header__link">Войти</a>
-        <a href="#" class="header__link">Регистрация</a>
+        <a href="#" class="header__sign-button">Войти</a>
+        <a href="#" class="header__sign-button">Регистрация</a>
       </p>
     </div>
     <nav class="header__nav">
@@ -74,7 +76,7 @@
     <section class="features">
       <h2>Каталог</h2>
       <ul class="features__list">
-        <li class="feature__item">
+        <li class="feature__item feature__item_yellow">
           <h3>Материалы</h3>
           <p class="feature__logo">
             <img src="img/catalog-icons/icon-paint.svg" width="44" height="65" alt="Логотип ведра с карской">
@@ -83,7 +85,7 @@
             <a href="#" class="feature__link">на любой вкус</a>
           </p>
         </li>
-        <li class="feature__item">
+        <li class="feature__item feature__item_blue">
           <h3>Инструмент</h3>
           <p class="feature__logo">
             <img src="img/catalog-icons/icon-drill.svg" width="75" height="61" alt="Логотип дрели">
@@ -92,7 +94,7 @@
             <a href="#" class="feature__link">НА ВСЕ СЛУЧАИ</a>
           </p>
         </li>
-        <li class="feature__item">
+        <li class="feature__item feature__item_lilac">
           <h3>Техника</h3>
           <p class="feature__logo">
             <img src="img/catalog-icons/icon-tactor.svg" width="78" height="62" alt="Логотип трактора">
@@ -101,7 +103,7 @@
             <a href="#" class="feature__link">для стройки</a>
           </p>
         </li>
-        <li class="feature__item">
+        <li class="feature__item feature__item_greenlight">
           <h3>Скидки 50%</h3>
           <p class="feature__logo">
             <img src="img/catalog-icons/icon-shopping.svg" width="59" height="72" alt="Логотип корзины для покупок">
@@ -110,7 +112,7 @@
             <a href="#" class="feature__link">На 350 ТОВАРОВ</a>
           </p>
         </li>
-        <li class="feature__item">
+        <li class="feature__item feature__item_yellow">
           <h3>Доставка</h3>
           <p class="feature__logo">
             <img src="img/catalog-icons/icon-van.svg" width="78" height="63" alt="Логотип едущей машины">

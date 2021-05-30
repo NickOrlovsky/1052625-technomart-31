@@ -3,68 +3,70 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Каталог нагазина "Техномарт"</title>
+    <title>Каталог магазина "Техномарт"</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
 </head>
 
-<body>
-    <header>
-        <div>
+<body class="page__body">
+    <header class="header">
+        <div class="header__checkout">
             <h3>Поиск</h3>
-            <a>
+            <a class="header__logo">
                 <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт">
             </a>
-            <form action="https://echo.htmlacademy.ru" method="get">
-                <input type="search" name="search" placeholder="Поиск">
+            <form class="header__search" action="https://echo.htmlacademy.ru" method="get">
+                <input type="search" name="search" placeholder="Поиск:">
             </form>
-            <form action="https://echo.htmlacademy.ru" method="post">
-                <p>
-                    <label for="bookmarks">Закладки:</label>
-                    <input type="text" name="bookmarks" value="0" id="bookmarks">
-                </p>
-                <p>
-                    <label for="basket">Корзина:</label>
-                    <input type="text" name="basket" value="0" id="basket">
-                </p>
-                <input type="submit" value="Оформить заказ">
-            </form>
+            <p class="header__bookmarks">
+                <a href="#" class="header__link">Закладки: 0</a>
+            </p>
+            <p class="header__bin">
+                <a href="#" class="header__link">Корзина: 0</a>
+            </p>
+            <p class="header__order">
+                <a href="#" class="header__link">Оформить заказ</a>
+            </p>
         </div>
-        <div>
+        <div class="header__registration">
             <h3>Вход/Регистрация</h3>
-            <p>Интернет-магазин<br>
+            <p class="header__subject">Интернет-магазин<br>
                 строительных материалов<br>
                 и инструментов для ремонта</p>
-            <p>
-                <a href="tel:78005558628">+7 800 555-86-28</a><br>
+            <p class="header__contact-info">
+                <a href="tel:78005558628" class="header__tel">+7 800 555-86-28</a><br>
                 г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
             </p>
-            <a href="#">Войти</a>
-            <a href="#">Регистрация</a>
+            <p class="header__sign">
+                <a href="#" class="header__link">Войти</a>
+                <a href="#" class="header__link">Регистрация</a>
+            </p>
         </div>
-        <nav>
-            <ul>
+        <nav class="header__nav">
+            <ul class="site-navigation">
                 <li>
-                    <a href="#">Главная</a>
+                    <a href="#" class="header__link">Главная</a>
                 </li>
                 <li>
-                    <a href="#">Компания</a>
+                    <a href="#" class="header__link">Компания</a>
                 </li>
                 <li>
-                    <a href="catalog.html">Каталог</a>
+                    <a href="catalog.html" class="header__link">Каталог</a>
                 </li>
                 <li>
-                    <a href="#">Новости</a>
+                    <a href="#" class="header__link">Новости</a>
                 </li>
                 <li>
-                    <a href="#">Спецпредложения</a>
+                    <a href="#" class="header__link">Спецпредложения</a>
                 </li>
                 <li>
-                    <a href="#">Доставка</a>
+                    <a href="#" class="header__link">Доставка</a>
                 </li>
                 <li>
-                    <a href="#">Контакты</a>
+                    <a href="#" class="header__link">Контакты</a>
                 </li>
             </ul>
         </nav>
