@@ -70,8 +70,16 @@
     --special-lilac: #DC91D8;
     --special-greenlight: #8ED78F;
     --special-yellowlight: #FFD180;
+
     --dark-grey: #293449;
     --dark-blue: #32425C;
+    --headline-yellow: #F9F5F0;
+    --pale-grey: #A9A9A9;
+    --focus-blue: #161D29;
+    --focus-grey: #C5C5C5;
+    --focus-dark: #1D2739;
+    --button-hover: #CA2C37;
+
 
     --success: #5FBB2D;
     --warning: #FFBF47;
@@ -90,11 +98,10 @@ body {
    line-height: 24px;
    font-weight: 400;
    color: var(--basic-black);
-
-   text-transform: uppercase;
 }
 
-a {
+a, a:hover, a:focus {
+    cursor: default;
     text-decoration: none;
     outline: none;
 }
@@ -103,6 +110,29 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.headline {
+    display: none;
+}
+
+.button {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+    cursor: default;
+    text-transform: uppercase;
+    border:none;
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+.button:focus {
+    background-color: var(--error);
+}
+
 
 /* ===========================Header======================== */
 
@@ -125,6 +155,10 @@ img {
     color: var(--basic-white);
 }
 
+.header__search input {
+    color: var(--basic-white);
+}
+
 .header__search-field {
     color: inherit;
     background-color: inherit;
@@ -132,9 +166,32 @@ img {
 }
 
 
-.header__order {
+
+.header__bookmarks {
+
+}
+
+.header__bookmarks a:focus {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: var(--focus-blue);
+}
+
+
+
+.header__order a {
     background-color: var(--basic-green);
 }
+
+.header__order a:hover {
+    background-color: var(--success);
+}
+
+.header__order a:focus {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
 
 .header__subject {
     font-size: 16px;
@@ -163,6 +220,8 @@ img {
     border: 3px solid var(--basic-white);
 }
 
+
+
 .header__sign {
     font-size: 21px;
     line-height: 21px;
@@ -174,19 +233,41 @@ img {
     color: var(--basic-black);
 }
 
+.header__sign a:hover {
+    color: var(--basic-red);
+}
+
+.header__sign a:focus {
+    color: var(--focus-grey);
+}
+
+
+
+
+
 .header__sign-button {
     background: var(--basic-white)
 }
-.header__nav {
+
+
+
+.site-navigation {
+    list-style: none;
     background-color: var(--dark-blue);
     color: var(--basic-white);
 }
 
-.header__nav a {
+.site-navigation a {
     color: var(--basic-white);
 }
-.site-navigation {
-    list-style: none;
+
+.site-navigation a:hover {
+    background-color: var(--dark-grey);
+}
+
+.site-navigation a:focus {
+    background-color: var(--focus-dark);
+    opacity: 0.5;
 }
 
 /* ===========================Features======================== */
@@ -198,55 +279,282 @@ img {
 .features__list {
     list-style: none;
 }
-.feature__item {
+.features__item h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
 }
 
-.feature__item_yellow {
+
+.features__item_yellow {
     background-color: var(--special-ylellow);
 }
 
-.feature__item_blue {
+.features__item_blue {
     background-color: var(--special-blue);
 }
 
-.feature__item_lilac {
+.features__item_lilac {
     background-color: var(--special-lilac);
 }
 
-.feature__item_greenlight {
+.features__item_greenlight {
     background-color: var(--special-greenlight);
 }
 
-.feature__button {
-   
+
+
+.features__button {
+   background-color: var(--basic-white);
+   opacity: 0.3; 
 }
 
-.feature__button a {
+.features__button a {
     color: var(--basic-white);
 }
 
-.feature__link {
-    
+.features__link {
+    text-transform: uppercase;
 }
-.feature__title h3 {
+
+.features__title h3 {
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
 }
 
-.feature__title p {
+.features__title p {
     font-size: 18px;
     line-height: 24px;
 }
 
 
-.feature__img {
-    
+.features__img {
+
 }
 
-.button {
-    font-size: 14px;
+/* ===========================Goods======================== */
+
+.goods {
+
+}
+
+.section__header {
+    background-color: var(--headline-yellow);
+}
+
+.section__header h3 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+}
+
+.goods__list {
+    list-style: none;
+}
+
+.item {
+    font-family: "PT Sans", Arial, sans-serif;
+    text-align: center;
+}
+
+.item__link h4 {
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--basic-black);
+}
+
+.item__old-price {
+    font-size: 17px;
+    line-height: 18px;
+    color: var(--pale-grey);
+
+    text-decoration: line-through;
+}
+.item__button {
+    font-size: 17px;
     line-height: 18px;
     color: var(--basic-white);
     background-color: var(--basic-red);
+}
+
+/* ===========================Producers======================== */
+
+.producers {
+
+}
+.producers__list {
+    list-style: none;
+}
+.producers__item {
+}
+.brand-image {
+
+}
+
+/* ===========================Services======================== */
+
+.services {
+    text-transform: none;
+    background-color: var(--basic-background);
+}
+.services__text {
+}
+
+.services__text h3 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+
+/* Шрифты для р не работают. Не могу понять почему */
+.services__text p {
+    font-family: "PT Sans" Arial, sans-serif;
+}
+
+.services__options-nav {
+    background-color: var(--dark-blue);
+}
+
+.services__options-nav a {
+    color: var(--basic-white);
+}
+
+.services__options-nav a:hover {
+    background-color: var(--dark-grey);
+}
+
+
+
+
+
+
+
+.services__options-item {
+    font-size: 21px;
+    font-family: 30px;
+    font-weight: 700;
+}
+
+.services__option {
+
+}
+
+.services__option h3 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    
+    color: var(--dark-blue);
+}
+
+.services__option p {
+    font-family: "PT Sans" Arial, sans-serif;
+}
+
+/* ===========================Company======================== */
+
+.company {
+    text-transform: none;
+}
+
+.company p {
+    font-family: "PT Sans" Arial, sans-serif;
+}
+
+.company h3 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.company__info {
+}
+
+.company__list {
+    list-style: none;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.company__contacts {
+}
+.company__map {
+}
+.company__modal {
+}
+.company__form {
+}
+.company__form-item {
+}
+
+/* ===========================Footer======================== */
+
+.footer {
+    color: var(--basic-white);
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer__navigation {
+    background-color: var(--dark-blue);
+}
+
+.footer__navigation a {
+    color: var(--basic-white);
+}
+
+
+.footer__address {
+}
+.footer__logo {
+}
+.footer__tel {
+}
+
+
+.footer__nav {
+}
+.nav-list {
+    list-style: none;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+.nav-list a:focus {
+    opacity: 0.5;
+}
+
+
+.nav-list_colored a {
+    color: var(--special-yellowlight);
+}
+
+.footer__social-list {
+    list-style: none;
+}
+
+.footer__feedback {
+    background-color: var(--dark-grey);
+}
+
+.footer__feedback p {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.footer__feedback a {
+    color: var(--special-yellowlight)
+}
+
+.footer__feedback a:hover {
+    text-decoration: underline;
+}
+
+.footer__feedback a:focus {
+    color: var(--basic-red);
 }
