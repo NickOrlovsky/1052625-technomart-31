@@ -18,8 +18,8 @@
       <a class="header__logo">
         <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт">
       </a>
-      <form class="header__search" action="https://echo.htmlacademy.ru" method="get">
-        <input type="search" name="search" placeholder="Поиск:" class="header__search-field">
+      <form class="header__form-search" action="https://echo.htmlacademy.ru" method="get">
+        <input type="search" name="search" placeholder="Поиск:" class="search-input">
       </form>
       <p class="header__bookmarks">
         <a href="#" class="header__link">Закладки: 0</a>
@@ -109,7 +109,7 @@
             <img src="img/catalog-icons/icon-shopping.svg" width="59" height="72" alt="Логотип корзины для покупок">
           </p>
           <p class="features__button">
-            <a href="#" class="feature__link">На 350 ТОВАРОВ</a>
+            <a href="#" class="features__link">На 350 ТОВАРОВ</a>
           </p>
         </li>
         <li class="features__item features__item_yellow">
@@ -315,18 +315,20 @@
         <div class="company__modal">
           <form class="company__form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="company__form-item">
-              <legend>Ваше имя:</legend>
+              <label class="company__form-label">Ваше имя:</label>
               <input type="text" name="name" placeholder="Имя Фамилия">
             </fieldset>
             <fieldset class="company__form-item">
-              <legend>Ваш e-mail:</legend>
+              <label class="company__form-label">Ваш e-mail:</label>
               <input type="email" name="email" placeholder="email@example.com">
             </fieldset>
             <fieldset class="company__form-item">
-              <legend>Текст письма:</legend>
+              <label class="company__form-label">Текст письма:</label>
               <textarea name="letter-text">В свободной форме</textarea>
             </fieldset>
-            <button type="submit" class="button">Отправить</button>
+            <div class="button-area">
+              <button type="submit" class="button">Отправить</button>
+            </div>
           </form>
         </div>
       </div>
@@ -386,13 +388,19 @@
         <h4 class="headline">Соцсети</h4>
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a href="#" class="social-link">Вконтакте</a>
+            <a href="#" class="social-link">
+              <img src="img/social-icons/vk.svg" alt="логотип Вконтакте">
+            </a>
           </li>
           <li class="footer__social-item">
-            <a href="#" class="social-link">Фейсбук</a>
+            <a href="#" class="social-link">
+              <img src="img/social-icons/fb.svg" alt="логотип Фейсбук">
+            </a>
           </li>
           <li class="footer__social-item">
-            <a href="#" class="social-link">Инстаграм</a>
+            <a href="#" class="social-link">
+              <img src="img/social-icons/ig.svg" alt="логотип Инстаграм">
+            </a>
           </li>
         </ul>
       </div>
