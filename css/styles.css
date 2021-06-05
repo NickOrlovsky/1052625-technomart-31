@@ -70,6 +70,7 @@
     --special-lilac: #DC91D8;
     --special-greenlight: #8ED78F;
     --special-yellowlight: #FFD180;
+    --dark-green: #367315;
 
     --dark-grey: #293449;
     --dark-blue: #32425C;
@@ -82,9 +83,19 @@
     --button-hover: #CA2C37;
 
     --border-grey: #EAEAEA;
-    --border-red: #EE3643;
 
     --background-grey: #F4F4F4;
+    --white-pale-background: rgba(255, 255, 255, 0.3);
+    --grey-light-hover: rgba(197, 197, 197, 0.3);
+    --grey-light-focus:  rgba(169, 169, 169, 0.3);
+    --focus-text: rgba(255, 255, 255, 0.5);
+    --focus-green: #518534;
+
+    --light-brown: #F7F3EC;
+    --modal-background: #F1F1F1;
+
+    --button-border: #E5E5E5;
+    --button-border-hover: #C5C5C5;
 
     --success: #5FBB2D;
     --warning: #FFBF47;
@@ -138,11 +149,16 @@ img {
     background-color: var(--error);
 }
 
-input {
-    outline: none;
+.title {
+    background-color: var(--basic-background);
 }
 
-
+.title h2 {
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+}
 
 
 /* ===========================Header======================== */
@@ -161,13 +177,13 @@ input {
     color: var(--basic-white);
 }
 
-
-
-
 .header__form-search {
     color: var(--basic-white);
 }
 
+.header__form-search input {
+    outline: none;
+}
 
 .search-input {
     background-color: var(--dark-grey);
@@ -193,21 +209,10 @@ input {
     color: var(--basic-black);
 }
 
-
-
-
-
-
-.header__bookmarks {
-
-}
-
 .header__bookmarks a:focus {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--focus-text);
     background-color: var(--focus-blue);
 }
-
-
 
 .header__order a {
     background-color: var(--basic-green);
@@ -218,11 +223,8 @@ input {
 }
 
 .header__order a:focus {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--focus-text);;
 }
-
-
-
 
 .header__subject {
     font-size: 16px;
@@ -247,11 +249,8 @@ input {
     font-size: 21px;
     line-height: 31px;
     font-weight: 700;
-
     border: 3px solid var(--basic-white);
 }
-
-
 
 .header__sign {
     font-size: 21px;
@@ -262,6 +261,7 @@ input {
 
 .header__sign a {
     color: var(--basic-black);
+    background-color: var(--basic-white);
 }
 
 .header__sign a:hover {
@@ -272,15 +272,19 @@ input {
     color: var(--focus-grey);
 }
 
+.header__login a {
+    background-color: var(--basic-white);
+}
 
-
-
+.header__account-nav a {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--dark-blue);
+}
 
 .header__sign-button {
     background: var(--basic-white)
 }
-
-
 
 .site-navigation {
     list-style: none;
@@ -302,6 +306,8 @@ input {
     opacity: 0.5;
 }
 
+/* ---------------------------index.html---------------------- */
+
 /* ===========================Features======================== */
 
 .features {
@@ -311,12 +317,12 @@ input {
 .features__list {
     list-style: none;
 }
+
 .features__item h3 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
 }
-
 
 .features__item_yellow {
     background-color: var(--special-ylellow);
@@ -334,24 +340,18 @@ input {
     background-color: var(--special-greenlight);
 }
 
-
-
-.features__button {
-
-}
-
 .features__button a {
     padding: inherit;
     color: var(--basic-white);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--white-pale-background);
 }
 
 .features__button a:hover {
-    background-color: rgba(197, 197, 197, 0.3);
+    background-color: var(--grey-light-hover);
 }
 
 .features__button a:focus {
-    background-color: rgba(169, 169, 169, 0.3);
+    background-color:var(--grey-light-focus);
 }
 
 .features__link {
@@ -370,15 +370,7 @@ input {
 }
 
 
-.features__img {
-
-}
-
 /* ===========================Goods======================== */
-
-.goods {
-
-}
 
 .section__header {
     background-color: var(--headline-yellow);
@@ -415,36 +407,31 @@ input {
 
     text-decoration: line-through;
 }
-.item__button {
+
+.item__button a {
     font-size: 17px;
     line-height: 18px;
     color: var(--basic-white);
     background-color: var(--basic-red);
 }
 
+
 /* ===========================Producers======================== */
 
-.producers {
-
-}
 .producers__list {
     list-style: none;
 }
+
 .producers__item {
     border: 1px solid var(--border-grey);
 }
 
-.brand-image {
-
-}
 
 /* ===========================Services======================== */
 
 .services {
     text-transform: none;
     background-color: var(--basic-background);
-}
-.services__text {
 }
 
 .services__text h3 {
@@ -453,10 +440,8 @@ input {
     font-weight: 400;
 }
 
-
-/* Шрифты для р не работают. Не могу понять почему */
 .services__text p {
-    font-family: "PT Sans" Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .services__options-nav {
@@ -471,21 +456,11 @@ input {
     background-color: var(--dark-grey);
 }
 
-
-
-
-
-
-
 .services__options-item {
     font-size: 21px;
     font-family: 30px;
     font-weight: 700;
     border-top: 1px solid ;
-}
-
-.services__option {
-
 }
 
 .services__option h3 {
@@ -497,7 +472,7 @@ input {
 }
 
 .services__option p {
-    font-family: "PT Sans" Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 /* ===========================Company======================== */
@@ -507,15 +482,13 @@ input {
 }
 
 .company p {
-    font-family: "PT Sans" Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .company h3 {
     font-size: 30px;
     line-height: 30px;
     font-weight: 400;
-}
-.company__info {
 }
 
 .company__list {
@@ -524,15 +497,10 @@ input {
     line-height: 24px;
 }
 
-.company__contacts {
-}
-.company__map {
-}
-.company__modal {
-}
 .company__form {
-    border-top: 7px solid var(--border-red);
+    border-top: 7px solid var(--basic-red);
 }
+
 .company__form-item {
     border: none;
 }
@@ -564,6 +532,8 @@ input {
 .button-area {
     background-color: var(--background-grey);
 }
+
+
 /* ===========================Footer======================== */
 
 .footer {
@@ -580,17 +550,6 @@ input {
     color: var(--basic-white);
 }
 
-
-.footer__address {
-}
-.footer__logo {
-}
-.footer__tel {
-}
-
-
-.footer__nav {
-}
 .nav-list {
     list-style: none;
 }
@@ -602,7 +561,6 @@ input {
 .nav-list a:focus {
     opacity: 0.5;
 }
-
 
 .nav-list_colored a {
     color: var(--special-yellowlight);
@@ -625,7 +583,6 @@ input {
     background-color: var(--basic-red);
 }
 
-
 .footer__feedback {
     background-color: var(--dark-grey);
 }
@@ -646,3 +603,220 @@ input {
 .footer__feedback a:focus {
     color: var(--basic-red);
 }
+
+/* ---------------------------catalog.html---------------------- */
+
+/* ===========================Breadcrumbs======================== */
+
+.breadcrumbs__list {
+    list-style: none;
+}
+
+.breadcrumbs__item a {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+/* ===========================Form-filter======================== */
+
+.filter__form {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.filter__form p {
+    font-size: 13px;
+    line-height: 18px;
+    background-color: var(--light-brown);
+}
+
+.filter__form legend {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.filter__input-price {
+    font-size: 17px;
+    font-weight: 18px;
+    
+}
+
+/* не смог задать background-color для range полоски, пока оставил как есть */
+
+.filter__input-price input {
+    font-size: 17px;
+    line-height: 18px;
+    background-color: var(--light-brown);
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.filter__list {
+    list-style: none;
+
+}
+
+.filter__option label {
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.filter__button {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+    border: 1px solid var(--button-border);
+}
+
+/* ===========================Sorting======================== */
+
+.sorting {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    background-color: var(--light-brown);
+}
+
+.sorting__list {
+    list-style: none;
+}
+
+.sorting__item a {
+    color: var(--basic-black);
+    opacity: 0.3;
+    text-transform: uppercase;
+    border-bottom: 1px dotted var(--basic-red);
+}
+
+.sorting__item a:hover {
+    border-bottom: 1px solid var(--basic-red);
+    opacity: 1;
+}
+
+/* Не знаю что лучше поставить для этого элемента :active или :focus */
+.sorting__item a:focus {
+    color: var(--basic-red);
+    opacity: 1;
+    border: none;
+}
+
+
+/* ===========================Catalog======================== */
+
+.catalog__list {
+    list-style: none;
+}
+
+.item__buy {
+    font-family: "Cuprum", Arial, sans-serif;
+}
+
+.item__buy-btn a {
+    font-size: 14px;
+    color: var(--basic-white);
+    background-color: var(--basic-green);
+    border-radius: 2px;
+    border-bottom: 3px solid var(--dark-green);
+    text-transform: uppercase;
+}
+
+.item__buy-btn a:hover {
+    background-color: var(--success);
+}
+
+.item__buy-btn a:focus {
+    background-color: var(--focus-green);
+}
+
+.item__bookmark-btn a {
+    font-size: 14px;
+    color: var(--dark-blue);
+    border: 3px solid var(--basic-green);
+    box-sizing: border-box;
+    border-radius: 2px;
+
+}
+
+.item__bookmark-btn a:hover {
+    border: 3px solid var(--dark-blue);
+}
+
+.item__bookmark-btn a:focus {
+    opacity: 0.5;
+}
+
+.item__modal {
+    border-top: 7px solid var(--basic-red);
+}
+
+.item__modal h4 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.item__checkout {
+    font-size: 14px;
+    line-height: 18px;
+    background-color: var(--modal-background);
+    text-transform: uppercase;
+}
+.item__checkout-btn a {
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+}
+.item__continue-btn a {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.page-list {
+    list-style: none;
+}
+.page-item a {  
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    border-radius: 2px;
+    color: var(--basic-black);
+    border: 1px solid var(--button-border);
+    text-transform: uppercase;
+}
+
+.page-item a:hover {    
+    border: 1px solid var(--button-border-hover);
+}
+
+.page-item a:focus {
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+    border: 1px solid var(--basic-red);
+}
+
+.page-item a:active {
+    border: 1px solid var(--basic-red);
+}
+
+
+/* ===========================About======================== */
+
+.about {
+    background-color: var(--basic-background);
+}
+
+.about h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
