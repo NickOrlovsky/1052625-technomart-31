@@ -800,7 +800,7 @@ img {
     list-style: none;
 }
 
-.pagination-item a {  
+.pagination-list__item a {  
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     line-height: 18px;
     border-radius: 2px;
@@ -810,17 +810,17 @@ img {
     text-decoration: none;
 }
 
-.pagination-item a:hover {    
+.pagination-list__itemitem a:hover {    
     border: 1px solid var(--button-border-hover);
 }
 
-.pagination-item a:focus {
+.pagination-list__item a:focus {
     color: var(--basic-white);
     background-color: var(--basic-red);
     border: 1px solid var(--basic-red);
 }
 
-.pagination-item a:active {
+.pagination-list__item a:active {
     border: 1px solid var(--basic-red);
 }
 
