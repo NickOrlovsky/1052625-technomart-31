@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="header__registration">
+    <div class="header__registration container">
       <h3 class="headline">Вход/Регистрация</h3>
       <p class="header__subject">Интернет-магазин<br>
         строительных материалов<br>
@@ -339,10 +339,10 @@
             <img src="img/map.png" width="300" height="158" alt="Карта показывающая адрес наб. Реки Карповки, 5 лит П">
           </a>
         </p>
-        <!-- <p class="company__button"> -->
+
         <a href="#" class="button">Заблудились? НапиШИТЕ НАМ!</a>
-        <!-- </p> -->
-        <div class="company__modal">
+
+        <!-- <div class="company__modal">
           <form class="company__form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="company__form-item">
               <label class="company__form-label">Ваше имя:</label>
@@ -352,29 +352,30 @@
               <label class="company__form-label">Ваш e-mail:</label>
               <input type="email" name="email" placeholder="email@example.com">
             </fieldset>
-            <fieldset class="company__form-item">
+            <fieldset class="company__form-item textarea">
               <label class="company__form-label">Текст письма:</label>
               <textarea name="letter-text">В свободной форме</textarea>
             </fieldset>
             <div class="button-area">
-              <button type="submit" class="button">Отправить</button>
+              <button type="submit" class="button button-modal">Отправить</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>
   <footer class="footer">
     <h2 class="headline">Обратная связь</h2>
-    <div class="footer__navigation">
+    <div class="footer__navigation container">
       <h3 class="headline">Навигация</h3>
       <div class="footer__address">
         <h3 class="headline">Адрес/Контакты</h3>
         <p class="footer__logo">
           <img src="img/main-logo-footer.svg" width="220" height="68" alt="Большой красный логотип Техномарт">
         </p>
-        <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p><br>
-        <a href="tel:78125550555" class="footer__tel">+7 800 555-86-28</a>
+        <p class="footer__address-text">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>
+          <a href="tel:78125550555" class="footer__tel">+7 800 555-86-28</a>
+        </p>
       </div>
       <nav class="footer__nav">
         <h3 class="headline">Навигация по сайту</h3>
@@ -412,34 +413,38 @@
       </nav>
     </div>
     <div class="footer__feedback">
-      <h3 class="headline">Свяжитесь с нами</h3>
-      <p>© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
-      <div class="footer__social">
-        <h4 class="headline">Соцсети</h4>
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a href="#" class="social-link">
-              <img src="img/social-icons/vk.svg" alt="логотип Вконтакте">
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a href="#" class="social-link">
-              <img src="img/social-icons/fb.svg" alt="логотип Фейсбук">
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a href="#" class="social-link">
-              <img src="img/social-icons/ig.svg" alt="логотип Инстаграм">
-            </a>
-          </li>
-        </ul>
+      <div class="footer__feedback-flex container">
+        <h3 class="headline">Свяжитесь с нами</h3>
+        <p>© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
+        <div class="footer__social">
+          <h4 class="headline">Соцсети</h4>
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a href="#" class="social-link">
+                <img src="img/social-icons/vk.svg" alt="логотип Вконтакте">
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="social-link">
+                <img src="img/social-icons/fb.svg" alt="логотип Фейсбук">
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="social-link">
+                <img src="img/social-icons/ig.svg" alt="логотип Инстаграм">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <p>Обратная связь:<br>
+            <a href="#">mail@htmlacademy.ru</a>
+          </p>
+          <p>Разработано —<br>
+            <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+          </p>
+        </div>
       </div>
-      <p>Обратная связь:<br>
-        <a href="#" class="feedback-link">mail@htmlacademy.ru</a>
-      </p>
-      <p>Разработано —<br>
-        <a href="https://htmlacademy.ru" class="feedback-link">htmlacademy.ru</a>
-      </p>
     </div>
   </footer>
 </body>

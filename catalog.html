@@ -14,24 +14,31 @@
 <body class="page__body">
     <header class="header">
         <div class="header__checkout">
-            <h3 class="headline">Поиск</h3>
-            <a class="header__logo">
-                <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт">
-            </a>
-            <form class="header__form-search" action="https://echo.htmlacademy.ru" method="get">
-                <input type="search" name="search" placeholder="Поиск:" class="search-input">
-            </form>
-            <p class="header__bookmarks">
-                <a href="#" class="header__link">Закладки: 0</a>
-            </p>
-            <p class="header__bookmarks">
-                <a href="#" class="header__link">Корзина: 0</a>
-            </p>
-            <p class="header__order">
-                <a href="#" class="header__link">Оформить заказ</a>
-            </p>
+            <div class="header__checkout-wrapper">
+                <h3 class="headline">Поиск</h3>
+                <div class="flex-container logo-search">
+                    <a>
+                        <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт"
+                            class="header__logo">
+                    </a>
+                    <form class="header__form-search" action="https://echo.htmlacademy.ru" method="get">
+                        <input type="search" name="search" placeholder="Поиск:" class="search-input">
+                    </form>
+                </div>
+                <div class="flex-container checkout-buttons">
+                    <p class="header__bookmarks">
+                        <a href="#" class="header__link">Закладки: 0</a>
+                    </p>
+                    <p class="header__bookmarks">
+                        <a href="#" class="header__link">Корзина: 0</a>
+                    </p>
+                    <p class="header__order">
+                        <a href="#" class="header__link">Оформить заказ</a>
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="header__registration">
+        <div class="header__registration container">
             <h3 class="headline">Вход/Регистрация</h3>
             <p class="header__subject">Интернет-магазин<br>
                 строительных материалов<br>
@@ -76,7 +83,7 @@
             </ul>
         </nav>
     </header>
-    <main class="container">
+    <main class="page-catalog container">
         <h1 class="headline">Каталог</h1>
         <section class="breadcrumbs">
             <h2 class="headline">Навигация по каталогу</h2>
@@ -102,11 +109,11 @@
                 <fieldset class="filter__input-price">
                     <legend>ЦЕНА:</legend>
                     <input class="filter__range" type="range" min="1" max="35000" step="100" id="price" value="30000">
-                    <input type="number" name="range" value="0">
-                    <input type="number" name="range" value="30000">
+                    <input class="filter__price" type="number" name="range" value="0">
+                    <input class="filter__price" type="number" name="range" value="30000">
                 </fieldset>
                 <fieldset>
-                    <legend>ПРОИЗВОДИТЕЛИ:</legend>
+                    <legend class="filter__legend-producers">ПРОИЗВОДИТЕЛИ:</legend>
                     <ul class="filter__list">
                         <li class="filter__option filter-checkbox">
                             <input class="filter__input-checkbox filter-input" type="checkbox" name="bosch"
@@ -136,7 +143,7 @@
                     </ul>
                 </fieldset>
                 <fieldset>
-                    <legend>ПИТАНИЕ:</legend>
+                    <legend class="filter__legend-power">ПИТАНИЕ:</legend>
                     <ul class="filter__list">
                         <li class="filter__option filter-radio">
                             <input class="filter__input-radio filter-input" type="radio" name="charge"
@@ -153,26 +160,26 @@
                 <button type="submit" class="filter__button">ПОКАЗАТЬ</button>
             </form>
         </section>
-        <section class="sorting">
-            <h2 class="headline">Сортировка товаров</h2>
-            <p>СОРТИРОВКА:</p>
-            <div class="sorting__filters">
-                <ul class="sorting__list">
-                    <li class="sorting__item"><a href="#">ПО ЦЕНЕ</a></li>
-                    <li class="sorting__item"><a href="#">ПО ТИПУ</a></li>
-                    <li class="sorting__item"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
-                    <li>
-                        <button type="button" class="sorting__button">
-                            <!-- стрелка вверх -->
-                        </button>
-                        <button type="button" class="sorting__button">
-                            <!-- стрелка вниз -->
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </section>
         <section class="catalog">
+            <div class="sorting">
+                <h2 class="headline">Сортировка товаров</h2>
+                <p>СОРТИРОВКА:</p>
+                <div class="sorting__filters">
+                    <ul class="sorting__list">
+                        <li class="sorting__item"><a href="#">ПО ЦЕНЕ</a></li>
+                        <li class="sorting__item"><a href="#">ПО ТИПУ</a></li>
+                        <li class="sorting__item"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
+                        <li>
+                            <button type="button" class="sorting__button">
+                                <!-- стрелка вверх -->
+                            </button>
+                            <button type="button" class="sorting__button">
+                                <!-- стрелка вниз -->
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <h2 class="headline">Каталог перфораторов</h2>
             <ul class="catalog__list">
                 <li class="item">
@@ -182,7 +189,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -196,9 +203,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                                Закрыть-
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -218,7 +225,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -232,9 +239,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                                Закрыть
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -254,7 +261,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -268,9 +275,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                                Закрыть
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -290,7 +297,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -304,9 +311,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                                Закрыть
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -326,7 +333,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -340,9 +347,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                                Закрыть
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -362,7 +369,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -376,9 +383,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                                Закрыть
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -397,7 +404,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -411,9 +418,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                               
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -433,7 +440,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -447,9 +454,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                              
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -469,7 +476,7 @@
                         <p class="item__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
-                        <div class="item__modal">
+                        <!-- <div class="item__modal">
                             <p>
                                 <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
                             </p>
@@ -483,9 +490,9 @@
                                 </p>
                             </div>
                             <button type="button">
-                                <!--Закрыть-->
+                                
                             </button>
-                        </div>
+                        </div> -->
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
                         </p>
@@ -508,12 +515,14 @@
                 <li class="pagination-list__item">
                     <a href="#">3</a>
                 </li>
-                <li class="pagination-list__item">
+                <li class="pagination-list__item pagination-list__item_next">
                     <a href="#">СЛЕДУЮЩАЯ</a>
                 </li>
             </ul>
         </section>
-        <aside class="about">
+    </main>
+    <aside class="about">
+        <div class="container">
             <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
             <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
                 кирпиче, бетоне и камне.
@@ -521,19 +530,20 @@
                 дрели, шуруповерта и отбойного молотка.
                 В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
                 ударная дрель.</p>
-        </aside>
-    </main>
+        </div>
+    </aside>
     <footer class="footer">
         <h2 class="headline">Обратная связь</h2>
-        <div class="footer__navigation">
+        <div class="footer__navigation container">
             <h3 class="headline">Навигация</h3>
             <div class="footer__address">
                 <h3 class="headline">Адрес/Контакты</h3>
                 <p class="footer__logo">
                     <img src="img/main-logo-footer.svg" width="220" height="68" alt="Большой красный логотип Техномарт">
                 </p>
-                <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p><br>
-                <a href="tel:78125550555" class="footer__tel">+7 800 555-86-28</a>
+                <p class="footer__address-text">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>
+                    <a href="tel:78125550555" class="footer__tel">+7 800 555-86-28</a>
+                </p>
             </div>
             <nav class="footer__nav">
                 <h3 class="headline">Навигация по сайту</h3>
@@ -571,28 +581,38 @@
             </nav>
         </div>
         <div class="footer__feedback">
-            <h3 class="headline">Свяжитесь с нами</h3>
-            <p>© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
-            <div class="footer__social">
-                <h4 class="headline">Соцсети</h4>
-                <ul class="footer__social-list">
-                    <li class="footer__social-item">
-                        <a href="#" class="social-link">Вконтакте</a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="#" class="social-link">Фейсбук</a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="#" class="social-link">Инстаграм</a>
-                    </li>
-                </ul>
+            <div class="footer__feedback-flex container">
+                <h3 class="headline">Свяжитесь с нами</h3>
+                <p>© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
+                <div class="footer__social">
+                    <h4 class="headline">Соцсети</h4>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="#" class="social-link">
+                                <img src="img/social-icons/vk.svg" alt="логотип Вконтакте">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="social-link">
+                                <img src="img/social-icons/fb.svg" alt="логотип Фейсбук">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="social-link">
+                                <img src="img/social-icons/ig.svg" alt="логотип Инстаграм">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__contacts">
+                    <p>Обратная связь:<br>
+                        <a href="#">mail@htmlacademy.ru</a>
+                    </p>
+                    <p>Разработано —<br>
+                        <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+                    </p>
+                </div>
             </div>
-            <p>Обратная связь:<br>
-                <a href="#" class="feedback-link">mail@htmlacademy.ru</a>
-            </p>
-            <p>Разработано —<br>
-                <a href="https://htmlacademy.ru" class="feedback-link">htmlacademy.ru</a>
-            </p>
         </div>
     </footer>
 </body>

@@ -274,14 +274,13 @@ img {
 }
 
 .header__registration {
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
+    margin-top: 46px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .header__registration p {
+    margin: 0;
     margin-bottom: 40px;
 }
 
@@ -319,10 +318,14 @@ img {
     color: var(--basic-black);
 }
 
+.header__sign p {
+    margin: 0;
+}
+
 .header__sign a {
     color: var(--basic-black);
-    background-color: var(--basic-white);
     text-decoration: none;
+    background-color: var(--basic-white);
 }
 
 .header__sign a:hover {
@@ -338,11 +341,17 @@ img {
     text-decoration: none;
 }
 
+.header__account-nav {
+    margin: 0;
+    margin-top: 7px
+}
+
 .header__account-nav a {
     font-size: 16px;
     line-height: 18px;
     color: var(--dark-blue);
     text-decoration: none;
+    background-color: none;
 }
 
 .header__sign-button {
@@ -411,10 +420,12 @@ img {
     /* display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 20px 43px 21px 23px;  */
+    padding: 20px 43px 21px 23px;*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    box-sizing: border-box;
+    padding-top: 20px;
 }
 
 .features-image-block {
@@ -789,6 +800,9 @@ img {
 
 .company__form {
     border-top: 7px solid var(--basic-red);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .company__form-item {
@@ -799,6 +813,12 @@ img {
     font-size: 18px;
 }
 
+.company__modal {
+    min-height: 430px;
+    width: 620px;
+    box-sizing: border-box;
+}
+
 .company__modal input {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
@@ -807,6 +827,9 @@ img {
     border: 2px solid var(--focus-grey);
     outline: none;
     -moz-appearance: none;
+    width: 220px;
+    height: 38px;
+    box-sizing: border-box;
 }
 
 .company__modal textarea {
@@ -819,8 +842,20 @@ img {
     -moz-appearance: none;
 }
 
+.textarea {
+    grid-column: 1/3;
+}
+
 .button-area {
     background-color: var(--background-grey);
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-modal {
+    padding: 11px 199.79px 11px 198.21px;
 }
 
 
@@ -830,10 +865,23 @@ img {
     color: var(--basic-white);
     font-size: 18px;
     line-height: 24px;
+    background-color: var(--dark-blue);
 }
 
 .footer__navigation {
-    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 54px;
+}
+
+.footer__logo {
+    margin: 0;
+    margin-bottom: 22px;
+}
+
+.footer__address-text {
+    margin: 0;
 }
 
 .footer__navigation a {
@@ -843,6 +891,20 @@ img {
 
 .nav-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 546px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.nav-list_colored {
+    margin: 0;
+}
+
+.nav-list_colored li:first-child {
+    margin-left: 22px;
 }
 
 .nav-list a:hover {
@@ -860,6 +922,11 @@ img {
 
 .footer__social-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 134px;
+    justify-content: space-evenly;
 }
 
 .footer__social-item a {
@@ -880,9 +947,17 @@ img {
     background-color: var(--dark-grey);
 }
 
+.footer__feedback-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 107px;
+}
+
 .footer__feedback p {
     font-size: 16px;
     line-height: 18px;
+    margin: 0;
 }
 
 .footer__feedback a {
@@ -898,12 +973,36 @@ img {
     color: var(--basic-red);
 }
 
+.footer__contacts {
+    width: 286px;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* ---------------------------catalog.html---------------------- */
+
+.page-catalog {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+}
 
 /* ===========================Breadcrumbs======================== */
 
+.breadcrumbs {
+    margin-bottom: 20px;
+    grid-column: 1/-1;
+}
+
 .breadcrumbs__list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 21px;
+    display: flex;
+}
+
+.breadcrumbs__item {
+    margin-right: 40px;
 }
 
 .breadcrumbs__item a {
@@ -916,17 +1015,48 @@ img {
     text-decoration: none;
 }
 
+/* ===========================Title======================== */
+
+.title {
+    height: 89px;
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    grid-column: 1/-1;
+    margin-bottom: 20px;
+}
+
+.title h2 {
+    padding: 0;
+    margin: 0;
+}
+
 /* ===========================Form-filter======================== */
+
+.filter {
+    grid-column: 1/2;
+}
 
 .filter__form {
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.filter__form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .filter__form p {
     font-size: 13px;
     line-height: 18px;
     background-color: var(--light-brown);
+    margin: 0;
+    margin-bottom: 14.15px;
+    padding: 10px 0px 10px 18px;
+
 }
 
 .filter__form legend {
@@ -935,10 +1065,15 @@ img {
     font-weight: 700;
 }
 
+
 .filter__input-price {
     font-size: 17px;
-    font-weight: 18px;
-    
+    line-height: 18px;
+    margin-bottom: 25px;
+}
+
+.filter__input-price legend {
+    margin-bottom: 9.85px;
 }
 
 /* не смог задать background-color для range полоски, пока оставил как есть */
@@ -952,9 +1087,38 @@ img {
     border: none;
 }
 
+.filter__range {
+    background-color: var(--light-brown);
+    padding: 20px;
+}
+
+.filter__price {
+    width: 95px;
+    height: 38px;
+    padding: 0;
+}
+
+.filter__legend-producers {
+    margin-bottom: 17.5px;
+}
+
+.filter__legend-power {
+    margin-bottom: 23.35px;
+}
+
 .filter__list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 27px;
+}
 
+.filter__option {
+    margin-bottom: 20px;
+}
+
+.filter__option:last-child {
+    margin-bottom: 0;
 }
 
 .filter__option label {
@@ -967,7 +1131,10 @@ img {
     text-transform: uppercase;
     background-color: var(--basic-white);
     border: 1px solid var(--button-border);
+    width: 220px;
+    height: 38px;
 }
+
 
 /* ===========================Sorting======================== */
 
@@ -976,10 +1143,28 @@ img {
     font-size: 13px;
     line-height: 18px;
     background-color: var(--light-brown);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 19px;
+    padding-right: 17px;
+}
+
+.sorting p {
+    margin: 0;
+}
+
+.sorting__filters {
+    width: 443px;
 }
 
 .sorting__list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sorting__item a {
@@ -1005,8 +1190,17 @@ img {
 
 /* ===========================Catalog======================== */
 
+.catalog {
+    grid-column: 2/-1;
+    padding-left: 20px;
+}
+
 .catalog__list {
     list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+    gap: 20px
 }
 
 .item__buy {
@@ -1079,6 +1273,11 @@ img {
 
 .pagination-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 38px 38px 38px 1fr;
 }
 
 .pagination-list__item a {  
@@ -1089,9 +1288,16 @@ img {
     border: 1px solid var(--button-border);
     text-transform: uppercase;
     text-decoration: none;
+    width: 38px;
+    height: 38px;
+    display: block;
 }
 
-.pagination-list__itemitem a:hover {    
+.pagination-list__item {
+
+}
+
+.pagination-list__item a:hover {    
     border: 1px solid var(--button-border-hover);
 }
 
@@ -1105,11 +1311,18 @@ img {
     border: 1px solid var(--basic-red);
 }
 
+.pagination-list__item_next a {
+    width: 140px;
+    height: 38px;
+}
+
 
 /* ===========================About======================== */
 
 .about {
     background-color: var(--basic-background);
+    grid-column: 1/-1;
+    padding: 64px 0px 68px;
 }
 
 .about h2 {
@@ -1117,9 +1330,11 @@ img {
     line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .about p {
+    margin: 0;
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
