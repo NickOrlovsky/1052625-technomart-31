@@ -15,7 +15,7 @@
   <header class="header">
     <div class="header__checkout">
       <div class="header__checkout-wrapper">
-        <h3 class="headline">Поиск</h3>
+        <h3 class="visually-hidden">Поиск</h3>
         <div class="flex-container logo-search">
           <a>
             <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт"
@@ -27,29 +27,29 @@
         </div>
         <div class="flex-container checkout-buttons">
           <p class="header__bookmarks">
-            <a href="#" class="header__link">Закладки: 0</a>
+            <a href="#" class="header__bookmarks-link">Закладки: 0</a>
           </p>
-          <p class="header__bookmarks">
-            <a href="#" class="header__link">Корзина: 0</a>
+          <p class="header__bookmarks header__bookmarks_bin">
+            <a href="#" class="header__bin-link">Корзина: 0</a>
           </p>
           <p class="header__order">
-            <a href="#" class="header__link">Оформить заказ</a>
+            <a href="#" class="header__order-link">Оформить заказ</a>
           </p>
         </div>
       </div>
     </div>
     <div class="header__registration container">
-      <h3 class="headline">Вход/Регистрация</h3>
+      <h3 class="visually-hidden">Вход/Регистрация</h3>
       <p class="header__subject">Интернет-магазин<br>
         строительных материалов<br>
         и инструментов для ремонта</p>
-      <p class="header__contact-info">
-        <a href="tel:78005558628" class="header__tel">+7 800 555-86-28</a><br>
-        г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
-      </p>
+      <div class="header__contact-info">
+        <a href="tel:78005558628" class="header__tel">+7 800 555-86-28</a>
+        <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+      </div>
       <div class="header__sign">
         <p class="header__login">
-          <a href="#">Войти</a>
+          <a href="#" class="header__login-enter">Войти</a>
           <a href="#">Регистрация</a>
         </p>
       </div>
@@ -81,10 +81,10 @@
     </nav>
   </header>
   <main class="main-page">
-    <h1 class="headline">Техномарт</h1>
+    <h1 class="visually-hidden">Техномарт</h1>
     <section class="features">
       <div class="container">
-        <h2 class="headline">Каталог</h2>
+        <h2 class="visually-hidden">Каталог</h2>
         <ul class="features__list">
           <li class="features__item features__item_yellow">
             <h3>Материалы</h3>
@@ -136,7 +136,7 @@
               <li class="slider-list__item slider-list__item_current">
                 <div class="features__title">
                   <h3>Перфораторы</h3>
-                  <p>Настоящие мужские игрушки</p>
+                  <p class="features__subtitle">Настоящие мужские игрушки</p>
                   <img src="img/worker-image.jpg" width="620" height="266"
                     alt="Рабочий сверлит стену синим перфоратором">
                   <p class="slider-btn-wrap">
@@ -147,7 +147,7 @@
               <li class="slider-list__item">
                 <div class="features__title">
                   <h3>Перфораторы</h3>
-                  <p>Настоящие мужские игрушки</p>
+                  <p class="features__subtitle">Настоящие мужские игрушки</p>
                   <img src="img/worker-image-2.jpg" width="620" height="266"
                     alt="Рабочий сверлит кирпичную стену дрелью">
                   <p class="slider-btn-wrap">
@@ -162,7 +162,7 @@
     </section>
     <section class="goods">
       <div class="container">
-        <h2 class="headline">Товары</h2>
+        <h2 class="visually-hidden">Товары</h2>
         <div class="section__header">
           <h3>Популярные товары:</h3>
           <p class="section__header-button">
@@ -227,7 +227,7 @@
     </section>
     <section class="producers">
       <div class="container">
-        <h2 class="headline">Производители</h2>
+        <h2 class="visually-hidden">Производители</h2>
         <div class="section__header">
           <h3>Популярные ПРОИзводители:</h3>
           <p class="section__header-button">
@@ -280,7 +280,7 @@
     </section>
     <section class="services">
       <div class="container">
-        <h2 class="headline">Сервисы</h2>
+        <h2 class="visually-hidden">Сервисы</h2>
         <article class="services__header">
           <h3>Сервисы</h3>
           <p>Хороший интернет-магазин отличается от плохого не только ценами!
@@ -288,7 +288,6 @@
         </article>
         <div class="services__content">
           <nav class="services__options-nav">
-            <h3 class="headline">Услуги</h3>
             <a href="#" class="services__options-item current">Доставка</a>
             <a href="#" class="services__options-item">Гарантия</a>
             <a href="#" class="services__options-item">Кредит</a>
@@ -301,8 +300,8 @@
                 Ведь мы неплохо заработаем,
                 поднимая его на ваш этаж!</p>
             </div>
-            <p class="services__img">
-              <img src="img/services/delivery-truck.png" width="468" height="261"
+            <p class="services__img-wrap">
+              <img class="services__img-delivery" src="img/services/delivery-truck.png" width="468" height="261"
                 alt="Логотип грузовик с синим кузовом">
             </p>
           </div>
@@ -312,8 +311,9 @@
               возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>Дом
               уж
               восстановите как-нибудь сами.</p>
-            <p class="services__img">
-              <img src="img/services/guarantee.png" width="389" height="283" alt="Логотип золотистой печати 100%">
+            <p class="services__img-wrap">
+              <img class="services__img-guarantee" src="img/services/guarantee.png" width="389" height="283"
+                alt="Логотип золотистой печати 100%">
             </p>
           </div>
           <div class="services__option">
@@ -321,8 +321,9 @@
             <p>Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.</p>
             <button type="submit" class="button">ОТПРАВИТЬ ЗАЯВКУ</button>
-            <p class="services__img">
-              <img src="img/services/credit.png" width="465" height="285" alt="Логотип деньги в кредит">
+            <p class="services__img-wrap">
+              <img class="services__img-credit" src="img/services/credit.png" width="465" height="285"
+                alt="Логотип деньги в кредит">
             </p>
           </div>
         </div>
@@ -330,16 +331,18 @@
     </section>
     <section class="company">
       <div class="company__container">
-        <h2 class="headline">О компании</h2>
+        <h2 class="visually-hidden">О компании</h2>
         <div class="company__info">
           <h3>КОМПАНИЯ «Техномарт»</h3>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
-            равнодушными любителей сэкономить на гастарбайтерах.
-            <br>
-            <br>
-            Мы можем доставить ваш товар в самые отдаленные точки России!
-            Техномарт работает со многими транспортными компаниями:
-          </p>
+          <div class="company__info-text">
+            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
+              равнодушными любителей сэкономить на гастарбайтерах.
+            </p>
+            <p>
+              Мы можем доставить ваш товар в самые отдаленные точки России!
+              Техномарт работает со многими транспортными компаниями:
+            </p>
+          </div>
           <ul class="company__list">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
@@ -382,11 +385,11 @@
     </section>
   </main>
   <footer class="footer">
-    <h2 class="headline">Обратная связь</h2>
-    <div class="footer__navigation container">
-      <h3 class="headline">Навигация</h3>
+    <h2 class="visually-hidden">Обратная связь</h2>
+    <div class="footer__navigation-container">
+      <h3 class="visually-hidden">Навигация</h3>
       <div class="footer__address">
-        <h3 class="headline">Адрес/Контакты</h3>
+        <h3 class="visually-hidden">Адрес/Контакты</h3>
         <p class="footer__logo">
           <img src="img/main-logo-footer.svg" width="220" height="68" alt="Большой красный логотип Техномарт">
         </p>
@@ -395,7 +398,7 @@
         </p>
       </div>
       <nav class="footer__nav">
-        <h3 class="headline">Навигация по сайту</h3>
+        <h3 class="visually-hidden">Навигация по сайту</h3>
         <ul class="nav-list">
           <li class="nav-list__item">
             <a href="#" class="nav-list__link">Компания</a>
@@ -431,10 +434,10 @@
     </div>
     <div class="footer__feedback">
       <div class="footer__feedback-flex container">
-        <h3 class="headline">Свяжитесь с нами</h3>
+        <h3 class="visually-hidden">Свяжитесь с нами</h3>
         <p>© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
         <div class="footer__social">
-          <h4 class="headline">Соцсети</h4>
+          <h4 class="visually-hidden">Соцсети</h4>
           <ul class="footer__social-list">
             <li class="footer__social-item">
               <a href="#" class="social-link">

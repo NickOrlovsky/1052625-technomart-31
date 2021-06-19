@@ -15,7 +15,7 @@
     <header class="header">
         <div class="header__checkout">
             <div class="header__checkout-wrapper">
-                <h3 class="headline">Поиск</h3>
+                <h3 class="visually-hidden">Поиск</h3>
                 <div class="flex-container logo-search">
                     <a>
                         <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт"
@@ -29,7 +29,7 @@
                     <p class="header__bookmarks">
                         <a href="#" class="header__link">Закладки: 0</a>
                     </p>
-                    <p class="header__bookmarks">
+                    <p class="header__bookmarks header__bookmarks_bin">
                         <a href="#" class="header__link">Корзина: 0</a>
                     </p>
                     <p class="header__order">
@@ -39,14 +39,14 @@
             </div>
         </div>
         <div class="header__registration container">
-            <h3 class="headline">Вход/Регистрация</h3>
+            <h3 class="visually-hidden">Вход/Регистрация</h3>
             <p class="header__subject">Интернет-магазин<br>
                 строительных материалов<br>
                 и инструментов для ремонта</p>
-            <p class="header__contact-info">
-                <a href="tel:78005558628" class="header__tel">+7 800 555-86-28</a><br>
-                г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
-            </p>
+            <div class="header__contact-info">
+                <a href="tel:78005558628" class="header__tel">+7 800 555-86-28</a>
+                <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+            </div>
             <div class="header__sign">
                 <p class="header__login">
                     <a href="#">Равшан Джамшутович</a>
@@ -84,9 +84,9 @@
         </nav>
     </header>
     <main class="page-catalog container">
-        <h1 class="headline">Каталог</h1>
+        <h1 class="visually-hidden">Каталог</h1>
         <section class="breadcrumbs">
-            <h2 class="headline">Навигация по каталогу</h2>
+            <h2 class="visually-hidden">Навигация по каталогу</h2>
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
                     <a href="catalog.html">Каталог</a>
@@ -103,7 +103,7 @@
             <h2>ПЕРФОРАТОРЫ</h2>
         </div>
         <section class="filter">
-            <h2 class="headline">Фильтр товаров</h2>
+            <h2 class="visually-hidden">Фильтр товаров</h2>
             <form action="https://echo.htmlacademy.ru" method="get" class="filter__form">
                 <p>ФИЛЬТР:</p>
                 <fieldset class="filter__input-price">
@@ -162,25 +162,25 @@
         </section>
         <section class="catalog">
             <div class="sorting">
-                <h2 class="headline">Сортировка товаров</h2>
+                <h2 class="visually-hidden">Сортировка товаров</h2>
                 <p>СОРТИРОВКА:</p>
-                <div class="sorting__filters">
-                    <ul class="sorting__list">
-                        <li class="sorting__item"><a href="#">ПО ЦЕНЕ</a></li>
-                        <li class="sorting__item"><a href="#">ПО ТИПУ</a></li>
-                        <li class="sorting__item"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
-                        <li>
-                            <button type="button" class="sorting__button">
-                                <!-- стрелка вверх -->
-                            </button>
-                            <button type="button" class="sorting__button">
-                                <!-- стрелка вниз -->
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+
+                <ul class="sorting__list">
+                    <li class="sorting__item"><a href="#">ПО ЦЕНЕ</a></li>
+                    <li class="sorting__item"><a href="#">ПО ТИПУ</a></li>
+                    <li class="sorting__item"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
+                    <li>
+                        <button type="button" class="sorting__button">
+                            <!-- стрелка вверх -->
+                        </button>
+                        <button type="button" class="sorting__button">
+                            <!-- стрелка вниз -->
+                        </button>
+                    </li>
+                </ul>
+
             </div>
-            <h2 class="headline">Каталог перфораторов</h2>
+            <h2 class="visually-hidden">Каталог перфораторов</h2>
             <ul class="catalog__list">
                 <li class="item">
                     <p class="item__img-wrapper"><img src="img/catalog-images/perforator-3.jpg" width="148" height="128"
@@ -533,11 +533,11 @@
         </div>
     </aside>
     <footer class="footer">
-        <h2 class="headline">Обратная связь</h2>
-        <div class="footer__navigation container">
-            <h3 class="headline">Навигация</h3>
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <div class="footer__navigation-container">
+            <h3 class="visually-hidden">Навигация</h3>
             <div class="footer__address">
-                <h3 class="headline">Адрес/Контакты</h3>
+                <h3 class="visually-hidden">Адрес/Контакты</h3>
                 <p class="footer__logo">
                     <img src="img/main-logo-footer.svg" width="220" height="68" alt="Большой красный логотип Техномарт">
                 </p>
@@ -546,7 +546,7 @@
                 </p>
             </div>
             <nav class="footer__nav">
-                <h3 class="headline">Навигация по сайту</h3>
+                <h3 class="visually-hidden">Навигация по сайту</h3>
                 <ul class="nav-list">
                     <li class="nav-list__item">
                         <a href="#" class="nav-list__link">Компания</a>
@@ -582,10 +582,10 @@
         </div>
         <div class="footer__feedback">
             <div class="footer__feedback-flex container">
-                <h3 class="headline">Свяжитесь с нами</h3>
+                <h3 class="visually-hidden">Свяжитесь с нами</h3>
                 <p>© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
                 <div class="footer__social">
-                    <h4 class="headline">Соцсети</h4>
+                    <h4 class="visually-hidden">Соцсети</h4>
                     <ul class="footer__social-list">
                         <li class="footer__social-item">
                             <a href="#" class="social-link">
