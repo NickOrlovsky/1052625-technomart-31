@@ -17,7 +17,7 @@
             <div class="header__checkout-wrapper">
                 <h3 class="visually-hidden">Поиск</h3>
                 <div class="flex-container logo-search">
-                    <a>
+                    <a class="header__logo-wrapper">
                         <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт"
                             class="header__logo">
                     </a>
@@ -27,16 +27,17 @@
                 </div>
                 <div class="flex-container checkout-buttons">
                     <p class="header__bookmarks">
-                        <a href="#" class="header__link">Закладки: 0</a>
+                        <a href="#" class="header__bookmarks-link">Закладки: 0</a>
                     </p>
                     <p class="header__bookmarks header__bookmarks_bin">
-                        <a href="#" class="header__link">Корзина: 0</a>
+                        <a href="#" class="header__bin-link">Корзина: 0</a>
                     </p>
                     <p class="header__order">
-                        <a href="#" class="header__link">Оформить заказ</a>
+                        <a href="#" class="header__order-link">Оформить заказ</a>
                     </p>
                 </div>
             </div>
+        </div>
         </div>
         <div class="header__registration container">
             <h3 class="visually-hidden">Вход/Регистрация</h3>
@@ -49,7 +50,7 @@
             </div>
             <div class="header__sign">
                 <p class="header__login">
-                    <a href="#">Равшан Джамшутович</a>
+                    <a href="#" class="header__login-account">Равшан Джамшутович</a>
                 </p>
                 <p class="header__account-nav">
                     <a href="#">Мои заказы</a>
@@ -89,6 +90,9 @@
             <h2 class="visually-hidden">Навигация по каталогу</h2>
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__home"></a>
+                </li>
+                <li class="breadcrumbs__item">
                     <a href="catalog.html">Каталог</a>
                 </li>
                 <li class="breadcrumbs__item">
@@ -108,36 +112,51 @@
                 <p>ФИЛЬТР:</p>
                 <fieldset class="filter__input-price">
                     <legend>ЦЕНА:</legend>
-                    <input class="filter__range" type="range" min="1" max="35000" step="100" id="price" value="30000">
-                    <input class="filter__price" type="number" name="range" value="0">
-                    <input class="filter__price" type="number" name="range" value="30000">
+                    <div class="range__filter">
+                        <div class="range__controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="toggle toggle-min" tabindex="0"></div>
+                            <div class="toggle toggle-max" tabindex="0"></div>
+                        </div>
+                        <div class="price-controls">
+                            <label class="min-price">
+                                <input type="number" name="min-price" value="0">
+                            </label>
+                            <span class="price-control__dash">—</span>
+                            <label class="max-price">
+                                <input type="number" name="max-price" value="30000">
+                            </label>
+                        </div>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend class="filter__legend-producers">ПРОИЗВОДИТЕЛИ:</legend>
                     <ul class="filter__list">
                         <li class="filter__option filter-checkbox">
-                            <input class="filter__input-checkbox filter-input" type="checkbox" name="bosch"
-                                id="filter-bosch" checked>
+                            <input class="filter__input-checkbox filter-input visually-hidden" type="checkbox"
+                                name="bosch" id="filter-bosch" checked>
                             <label for="filter-bosch">BOSCH</label>
                         </li>
                         <li class="filter__option filter-checkbox">
-                            <input class="filter__input-checkbox filter-input" type="checkbox" name="interskol"
-                                id="filter-interskol">
+                            <input class="filter__input-checkbox filter-input visually-hidden" type="checkbox"
+                                name="interskol" id="filter-interskol">
                             <label for="filter-interskol">ИНТЕРСКОЛ</label>
                         </li>
                         <li class="filter__option filter-checkbox">
-                            <input class="filter__input-checkbox filter-input" type="checkbox" name="makita"
-                                id="filter-makita" checked>
+                            <input class="filter__input-checkbox filter-input visually-hidden" type="checkbox"
+                                name="makita" id="filter-makita" checked>
                             <label for="filter-makita">MAKITA</label>
                         </li>
                         <li class="filter__option filter-checkbox">
-                            <input class="filter__input-checkbox filter-input" type="checkbox" name="dewalt"
-                                id="filter-dewalt">
+                            <input class="filter__input-checkbox filter-input visually-hidden" type="checkbox"
+                                name="dewalt" id="filter-dewalt" blocked>
                             <label for="filter-dewalt">Dewalt</label>
                         </li>
                         <li class="filter__option filter-checkbox">
-                            <input class="filter__input-checkbox filter-input" type="checkbox" name="hitachi"
-                                id="filter-hitachi">
+                            <input class="filter__input-checkbox filter-input visually-hidden" type="checkbox"
+                                name="hitachi" id="filter-hitachi">
                             <label for="filter-hitachi">Hitachi</label>
                         </li>
                     </ul>
@@ -146,13 +165,13 @@
                     <legend class="filter__legend-power">ПИТАНИЕ:</legend>
                     <ul class="filter__list">
                         <li class="filter__option filter-radio">
-                            <input class="filter__input-radio filter-input" type="radio" name="charge"
+                            <input class="filter__input-radio filter-input visually-hidden" type="radio" name="charge"
                                 id="filter-accumulators" value="accumulators">
                             <label for="filter-accumulators">Аккумуляторные</label>
                         </li>
                         <li class="filter__option filter-radio">
-                            <input class="filter__input-radio filter-input" type="radio" name="charge" id="filter-net"
-                                value="net">
+                            <input class="filter__input-radio filter-input visually-hidden" type="radio" name="charge"
+                                id="filter-net" value="net">
                             <label for="filter-net">Сетевые</label>
                         </li>
                     </ul>
@@ -169,13 +188,11 @@
                     <li class="sorting__item"><a href="#">ПО ЦЕНЕ</a></li>
                     <li class="sorting__item"><a href="#">ПО ТИПУ</a></li>
                     <li class="sorting__item"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
-                    <li>
-                        <button type="button" class="sorting__button">
-                            <!-- стрелка вверх -->
-                        </button>
-                        <button type="button" class="sorting__button">
-                            <!-- стрелка вниз -->
-                        </button>
+                    <li class="sorting__button-wrap">
+                        <button type="button" class="sorting__button sorting__button_up"
+                            aria-label="Фильтр вверх"></button>
+                        <button type="button" class="sorting__button sorting__button_down"
+                            aria-label="Фильтр вниз"></button>
                     </li>
                 </ul>
 
@@ -202,9 +219,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -238,9 +253,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -274,9 +287,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -289,6 +300,7 @@
                     <p class="item__button">
                         <a href="#">25500 Р.</a>
                     </p>
+                    <p class="new-mark new-mark_catalog-item">New</p>
                 </li>
                 <li class="item">
                     <p class="item__img-wrapper"><img src="img/catalog-images/perforator-2.jpg" width="127" height="112"
@@ -310,9 +322,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -325,6 +335,7 @@
                     <p class="item__button">
                         <a href="#">15500 Р.</a>
                     </p>
+                    <p class="new-mark new-mark_catalog-item">New</p>
                 </li>
                 <li class="item">
                     <p class="item__img-wrapper"><img src="img/catalog-images/perforator-3.jpg" width="148" height="128"
@@ -346,9 +357,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -382,9 +391,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -396,6 +403,7 @@
                     <p class="item__button">
                         <a href="#">12500 Р.</a>
                     </p>
+                    <p class="new-mark new-mark_catalog-item">New</p>
                 </li>
                 <li class="item">
                     <p class="item__img-wrapper"><img src="img/catalog-images/perforator-2.jpg" width="127" height="112"
@@ -417,9 +425,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -432,6 +438,7 @@
                     <p class="item__button">
                         <a href="#">15500 Р.</a>
                     </p>
+                    <p class="new-mark new-mark_catalog-item">New</p>
                 </li>
                 <li class="item">
                     <p class="item__img-wrapper"><img src="img/catalog-images/perforator-3.jpg" width="148" height="128"
@@ -453,9 +460,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -489,9 +494,7 @@
                                     <a href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
                                 </p>
                             </div>
-                            <button type="button" class="item__modal-close">
-                                Закрыть
-                            </button>
+                            <button type="button" class="item__modal-close"></button>
                         </div>
                         <p class="item__bookmark-btn">
                             <a href="#">В закладки</a>
@@ -503,6 +506,7 @@
                     <p class="item__button">
                         <a href="#">12500 Р.</a>
                     </p>
+                    <p class="new-mark new-mark_catalog-item">New</p>
                 </li>
             </ul>
             <ul class="pagination-list">
