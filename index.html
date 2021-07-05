@@ -17,25 +17,21 @@
       <div class="header__checkout-wrapper">
         <h3 class="visually-hidden">Поиск</h3>
         <div class="flex-container logo-search">
-          <a class="header__logo-wrapper">
-            <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт"
-              class="header__logo">
+          <a class="header__logo-posion">
+            <div class="header__logo-wrapper">
+              <img src="img/main-logo-header.svg" width="107" height="17" alt="Красный логотип Техномарт"
+                class="header__logo">
+            </div>
           </a>
           <form class="header__form-search" action="https://echo.htmlacademy.ru" method="get">
-            <!-- <span class="header__input-icon-wrap">
-              <img src="img/icons/search.svg" alt="иконка поиска">
-            </span> -->
             <input type="search" name="search" placeholder="Поиск:" class="search-input">
           </form>
         </div>
         <div class="flex-container checkout-buttons">
           <p class="header__bookmarks">
-            <span class="header__bookmarks-icon-wrap">
-              <img src="img/icons/bookmark.svg" alt="иконка закладок" class="bookmarks-icon">
-            </span>
             <a href="#" class="header__bookmarks-link">Закладки: 0</a>
           </p>
-          <p class="header__bookmarks header__bookmarks_bin">
+          <p class="header__bookmarks header__bookmarks--bin">
             <a href="#" class="header__bin-link">Корзина: 0</a>
           </p>
           <p class="header__order">
@@ -92,7 +88,7 @@
       <div class="container">
         <h2 class="visually-hidden">Каталог</h2>
         <ul class="features__list">
-          <li class="features__item features__item_yellow">
+          <li class="features__item features__item--yellow">
             <h3>Материалы</h3>
             <p class="features__logo">
               <img src="img/catalog-icons/icon-paint.svg" width="44" height="65" alt="Логотип ведра с карской">
@@ -100,9 +96,9 @@
             <p class="features__button">
               <a href="#" class="features__link">на любой вкус</a>
             </p>
-            <p class="new-mark new-mark_features">New</p>
+            <p class="new-mark new-mark--features">New</p>
           </li>
-          <li class="features__item features__item_blue">
+          <li class="features__item features__item--blue">
             <h3>Инструмент</h3>
             <p class="features__logo">
               <img src="img/catalog-icons/icon-drill.svg" width="75" height="61" alt="Логотип дрели">
@@ -111,7 +107,7 @@
               <a href="#" class="features__link">НА ВСЕ СЛУЧАИ</a>
             </p>
           </li>
-          <li class="features__item features__item_lilac">
+          <li class="features__item features__item--lilac">
             <h3>Техника</h3>
             <p class="features__logo">
               <img src="img/catalog-icons/icon-tactor.svg" width="78" height="62" alt="Логотип трактора">
@@ -120,7 +116,7 @@
               <a href="#" class="features__link">для стройки</a>
             </p>
           </li>
-          <li class="features__item features__item_greenlight">
+          <li class="features__item features__item--greenlight">
             <h3>Скидки 50%</h3>
             <p class="features__logo">
               <img src="img/catalog-icons/icon-shopping.svg" width="59" height="72" alt="Логотип корзины для покупок">
@@ -129,7 +125,7 @@
               <a href="#" class="features__link">На 350 ТОВАРОВ</a>
             </p>
           </li>
-          <li class="features__item features__item_yellow">
+          <li class="features__item features__item--yellow">
             <h3>Доставка</h3>
             <p class="features__logo">
               <img src="img/catalog-icons/icon-van.svg" width="78" height="63" alt="Логотип едущей машины">
@@ -140,7 +136,7 @@
           </li>
           <li class="features__item features-image-block">
             <ul class="feature__slider slider-list">
-              <li class="slider-list__item slider-list__item_current">
+              <li class="slider-list__item slider-list__item--current">
                 <div class="features__title">
                   <h3>Перфораторы</h3>
                   <p class="features__subtitle">Настоящие мужские игрушки</p>
@@ -149,8 +145,8 @@
                   <p class="slider-btn-wrap">
                     <a href="#" class="button">ОТКРЫТЬ КАТАЛОГ</a>
                   </p>
-                  <button class="feature__sllider-btn" aria-label="Влево"></button>
-                  <button class="feature__sllider-btn feature__sllider-btn_right" aria-label="Вправо"></button>
+                  <button class="feature__sllider-btn feature__sllider-btn--left" aria-label="Влево"></button>
+                  <button class="feature__sllider-btn feature__sllider-btn--right" aria-label="Вправо"></button>
                 </div>
               </li>
               <li class="slider-list__item">
@@ -200,7 +196,7 @@
             </a>
             <p class="catalog-card__old-price">22500 Р.</p>
             <a href="#" class="catalog-card__button">15500 Р.</a>
-            <p class="new-mark new-mark_catalog-card">New</p>
+            <p class="new-mark new-mark--catalog-card">New</p>
           </li>
           <li class="catalog-card">
             <a href="#" class="catalog-card__link">
@@ -223,7 +219,7 @@
             </a>
             <p class="catalog-card__old-price">22500 Р.</p>
             <a href="#" class="catalog-card__button">12500 Р.</a>
-            <p class="new-mark new-mark_catalog-card">New</p>
+            <p class="new-mark new-mark--catalog-card">New</p>
           </li>
         </ul>
       </div>
@@ -295,7 +291,7 @@
             <a href="#" class="services__options-item">Гарантия</a>
             <a href="#" class="services__options-item">Кредит</a>
           </nav>
-          <div class="services__option services__option_current">
+          <div class="services__option services__option--current">
             <div class="services__option-text">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо
@@ -400,7 +396,7 @@
             <a href="#" class="nav-list__link">Контакты</a>
           </li>
         </ul>
-        <ul class="nav-list nav-list_colored">
+        <ul class="nav-list nav-list--colored">
           <li class="nav-list__item">
             <a href="#" class="nav-list__link">Материалы</a>
           </li>

@@ -17,9 +17,11 @@
             <div class="header__checkout-wrapper">
                 <h3 class="visually-hidden">Поиск</h3>
                 <div class="flex-container logo-search">
-                    <a class="header__logo-wrapper">
-                        <img src="img/main-logo-header.svg" width="220" height="47" alt="Красный логотип Техномарт"
-                            class="header__logo">
+                    <a class="header__logo-posion">
+                        <div class="header__logo-wrapper">
+                            <img src="img/main-logo-header.svg" width="107" height="17" alt="Красный логотип Техномарт"
+                                class="header__logo">
+                        </div>
                     </a>
                     <form class="header__form-search" action="https://echo.htmlacademy.ru" method="get">
                         <input type="search" name="search" placeholder="Поиск:" class="search-input">
@@ -29,7 +31,7 @@
                     <p class="header__bookmarks">
                         <a href="#" class="header__bookmarks-link">Закладки: 0</a>
                     </p>
-                    <p class="header__bookmarks header__bookmarks_bin">
+                    <p class="header__bookmarks header__bookmarks--bin">
                         <a href="#" class="header__bin-link">Корзина: 0</a>
                     </p>
                     <p class="header__order">
@@ -188,10 +190,19 @@
                     <li class="sorting__item"><a href="#">ПО ТИПУ</a></li>
                     <li class="sorting__item"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
                     <li class="sorting__button-wrap">
-                        <button type="button" class="sorting__button sorting__button_up"
-                            aria-label="Фильтр вверх"></button>
-                        <button type="button" class="sorting__button sorting__button_down"
-                            aria-label="Фильтр вниз"></button>
+                        <button type="button" class="sorting__button" aria-label="Фильтр вверх">
+                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="sorting__button-form sorting__button-form--up">
+                                <path d="M5.5 10L0 0H11" />
+                            </svg>
+                        </button>
+                        <button type="button" class="sorting__button" aria-label="Фильтр вниз">
+                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="sorting__button-form">
+                                <path d="M5.5 10L0 0H11" />
+                            </svg>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -200,7 +211,7 @@
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-3.jpg" width="148"
                             height="128" alt="Синий перфоратор с коротким сверлом"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -217,7 +228,7 @@
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-3.jpg" width="148"
                             height="128" alt="Синий перфоратор с коротким сверлом"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -234,7 +245,7 @@
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-3.jpg" width="148"
                             height="128" alt="Синий перфоратор с коротким сверлом"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -247,12 +258,12 @@
                     </a>
                     <p class="catalog-card__old-price">30500 Р.</p>
                     <a href="#" class="catalog-card__button">25500 Р.</a>
-                    <p class="new-mark new-mark_catalog-card">New</p>
+                    <p class="new-mark new-mark--catalog-card">New</p>
                 </li>
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-2.jpg" width="127"
                             height="112" alt="Синий перфоратор с коротким сверлом и выходящей вперед ручкой"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -265,12 +276,12 @@
                     </a>
                     <p class="catalog-card__old-price">22500 Р.</p>
                     <a href="#" class="catalog-card__button">15500 Р.</a>
-                    <p class="new-mark new-mark_catalog-card">New</p>
+                    <p class="new-mark new-mark--catalog-card">New</p>
                 </li>
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-3.jpg" width="148"
                             height="128" alt="Синий перфоратор с коротким сверлом"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -287,7 +298,7 @@
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-2.jpg" width="127"
                             height="112" alt="Синий перфоратор с коротким сверлом и выходящей вперед ручкой"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -299,12 +310,12 @@
                         <h4>Перфоратор BOSCH<br>BFG 2000</h4>
                     </a>
                     <a href="#" class="catalog-card__button">12500 Р.</a>
-                    <p class="new-mark new-mark_catalog-card">New</p>
+                    <p class="new-mark new-mark--catalog-card">New</p>
                 </li>
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-2.jpg" width="127"
                             height="112" alt="Синий перфоратор с коротким сверлом и выходящей вперед ручкой"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -317,12 +328,12 @@
                     </a>
                     <p class="catalog-card__old-price">22500 Р.</p>
                     <a href="#" class="catalog-card__button">15500 Р.</a>
-                    <p class="new-mark new-mark_catalog-card">New</p>
+                    <p class="new-mark new-mark--catalog-card">New</p>
                 </li>
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-3.jpg" width="148"
                             height="128" alt="Синий перфоратор с коротким сверлом"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -337,7 +348,7 @@
                 <li class="catalog-card">
                     <p class="catalog-card__img-wrapper"><img src="img/catalog-images/perforator-2.jpg" width="127"
                             height="112" alt="Синий перфоратор с коротким сверлом и выходящей вперед ручкой"></p>
-                    <div class="catalog-card__buy catalog-card__buy_hidden">
+                    <div class="catalog-card__buy catalog-card__buy--hidden">
                         <p class="catalog-card__buy-btn">
                             <a href="#">КУПИТЬ</a>
                         </p>
@@ -349,7 +360,7 @@
                         <h4>Перфоратор BOSCH<br>BFG 2000</h4>
                     </a>
                     <a href="#" class="catalog-card__button">12500 Р.</a>
-                    <p class="new-mark new-mark_catalog-card">New</p>
+                    <p class="new-mark new-mark--catalog-card">New</p>
                 </li>
             </ul>
             <ul class="pagination-list">
@@ -362,7 +373,7 @@
                 <li class="pagination-list__item">
                     <a href="#">3</a>
                 </li>
-                <li class="pagination-list__item pagination-list__item_next">
+                <li class="pagination-list__item pagination-list__item--next">
                     <a href="#">СЛЕДУЮЩАЯ</a>
                 </li>
             </ul>
@@ -462,7 +473,7 @@
             </div>
         </div>
     </footer>
-    <section class="catalog__modal catalog__modal_pop-up">
+    <section class="catalog__modal catalog__modal--pop-up">
         <p class="catalog__tick-wrap">
             <img src="img/icon-mark.png" width="66" height="66" alt="Белая галочка на зеленом фоне">
         </p>

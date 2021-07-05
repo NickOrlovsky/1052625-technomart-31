@@ -102,6 +102,9 @@
     --range-gray: #ABABAB;
     --range-shadow: #ABABAB;
 
+    --logo-border-bottom: #B52933;
+    --logo-border-bottom-active: #8D1E26;
+
     --success: #5FBB2D;
     --warning: #FFBF47;
     --error: #BA2732;
@@ -159,7 +162,7 @@ img {
     background-color: var(--button-hover);
 }
 
-.button:focus {
+.button:active {
     background-color: var(--error);
 }
 
@@ -214,17 +217,35 @@ img {
     margin: 0;
 }
 
-.header__logo-wrapper {
+.header__logo-posion {
     position: relative;
     min-width: 220px;
     cursor: pointer;
 }
 
-.header__logo {
-    width: 220px;
-    height: 47px;
+.header__logo-wrapper {
     position: absolute;
     top: -21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 220px;
+    height: 42px;
+
+    background-color: var(--basic-red);
+    border-bottom: 5px solid var(--logo-border-bottom);
+}
+
+.header__logo-wrapper:active {
+    background-color: var(--error);
+    border-bottom: 5px solid var(--logo-border-bottom-active);
+}
+
+.header__logo {
+    width: 118px;
+    height: 18px;
 }
 
 .header__checkout a {
@@ -246,19 +267,6 @@ img {
     background-color: var(--dark-grey);
     border: none;
     outline: none;
-}
-
-.header__form-search input::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 17px;
-    height: 17px;
-
-    background: url("../img/icons/search.svg") no-repeat;
-    background-position: 0 0;
 }
 
 .header__input-wrapper {
@@ -309,7 +317,7 @@ img {
 .header__bookmarks a {
     display: inline-block;
 
-    padding: 9px 24px 9px 25px;
+    padding: 9px 24px 9px 43px;
 }
 
 .header__bookmarks-icon-wrap {
@@ -318,22 +326,11 @@ img {
     left: 3px;
 }
 
-.bookmarks-icon {
-    opacity: 0.3;
-}
-
-.header__bookmarks .bookmarks-icon:hover {
-    
-}
-
-
-
-
 .header__bookmarks-link {
     position: relative;
 }
 
-/* .header__bookmarks-link::before {
+.header__bookmarks-link::before {
     content: "";
     position: absolute;
     top: 12px;
@@ -346,25 +343,25 @@ img {
     background-repeat: no-repeat;
     background-position: 0 0;
     opacity: 0.3;
-} */
+} 
 
 .header__bookmarks-link::before:hover {
     opacity: 1;
 }
 
 
-.header__bookmarks_bin a {
+.header__bookmarks--bin a {
     position: relative;
 
     display: inline-block;
 
-    padding: 9px 26px 9px 0px;
+    padding: 9px 26px 9px 49px;
 }
 
-.header__bookmarks_bin a::before {
+.header__bookmarks--bin a::before {
     content: "";
     position: absolute;
-    top: 12px;
+    top: 13px;
     left: 26px;
 
     width: 15px;
@@ -375,7 +372,7 @@ img {
 
 }
 
-.header__bookmarks a:focus {
+.header__bookmarks a:active {
     color: var(--focus-text);
 
     background-color: var(--focus-blue);
@@ -395,7 +392,7 @@ img {
     background-color: var(--success);
 }
 
-.header__order a:focus {
+.header__order a:active {
     color: var(--focus-text);;
 }
 
@@ -431,7 +428,7 @@ img {
 }
 
 .header__contact-info a,
-.header__contact-info a:focus {
+.header__contact-info a:active {
     color: var(--basic-red);
     text-decoration: none;
 }
@@ -483,7 +480,7 @@ img {
     color: var(--basic-red);
 }
 
-.header__sign a:focus {
+.header__sign a:active {
     color: var(--focus-grey);
 }
 
@@ -630,10 +627,7 @@ img {
 .site-navigation a {
     display: block;
 
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding: 16px 28px;
 
     color: var(--basic-white);
     text-decoration: none;
@@ -721,7 +715,7 @@ img {
     display: none;
 }
 
-.slider-list__item_current {
+.slider-list__item--current {
     display: block;
 }
 
@@ -748,19 +742,19 @@ img {
     text-align: center;
 }
 
-.features__item_yellow {
+.features__item--yellow {
     background-color: var(--special-ylellow);
 }
 
-.features__item_blue {
+.features__item--blue {
     background-color: var(--special-blue);
 }
 
-.features__item_lilac {
+.features__item--lilac {
     background-color: var(--special-lilac);
 }
 
-.features__item_greenlight {
+.features__item--greenlight {
     background-color: var(--special-greenlight);
 }
 
@@ -787,7 +781,7 @@ img {
     background-color: var(--grey-light-hover);
 }
 
-.features__button a:focus {
+.features__button a:active {
     background-color:var(--grey-light-focus);
 }
 
@@ -848,7 +842,7 @@ img {
     cursor: pointer;
 }
 
-.feature__sllider-btn_right {
+.feature__sllider-btn--right {
     top: 117px;
     left: 571px;
 
@@ -1045,6 +1039,14 @@ img {
     border: 1px solid var(--border-grey);
 }
 
+.producers__item a:active {
+    opacity: 0.5;
+}
+
+.producers__item:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 /* ===========================Services======================== */
 
 .services {
@@ -1154,7 +1156,7 @@ img {
     padding-left: 80px;
 }
 
-.services__option_current {
+.services__option--current {
     display: block;
 }
 
@@ -1496,11 +1498,11 @@ img {
     list-style: none;
 }
 
-.nav-list_colored {
+.nav-list--colored {
     margin: 0;
 }
 
-.nav-list_colored li:first-child {
+.nav-list--colored li:first-child {
     margin-left: 22px;
 }
 
@@ -1508,12 +1510,12 @@ img {
     text-decoration: underline;
 }
 
-.nav-list a:focus {
+.nav-list a:active {
     opacity: 0.5;
     text-decoration: none;
 }
 
-.nav-list_colored a {
+.nav-list--colored a {
     color: var(--special-yellowlight);
     text-decoration: none;
 }
@@ -1555,7 +1557,7 @@ img {
     background-color: var(--basic-red);
 }
 
-.footer__social-item a:focus {
+.footer__social-item a:active{
     background-color: var(--basic-red);
 }
 
@@ -1589,7 +1591,7 @@ img {
     text-decoration: underline;
 }
 
-.footer__feedback a:focus {
+.footer__feedback a:active {
     color: var(--basic-red);
 }
 
@@ -2104,7 +2106,7 @@ img {
 }
 
 /* Не знаю что лучше поставить для этого элемента :active или :focus */
-.sorting__item a:focus {
+.sorting__item a:active {
     color: var(--basic-red);
 
     opacity: 1;
@@ -2122,27 +2124,24 @@ img {
 .sorting__button {
     background-color: inherit;
     border: none;
+    padding: 0;
 }
 
-.sorting__button_up {
-   width: 0;
-   height: 0;
-   /* border-left: 5px solid transparent;
-   border-right: 5px solid transparent;
-   border-bottom: 20px solid var(--focus-grey); */
-
-   border: 10px solid transparent;
-   border-left: 20px solid green;
-   transform: rotate(90deg);
-
+.sorting__button-form {
+    fill: var(--focus-grey);
 }
 
-.sorting__button_down {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 20px solid var(--focus-grey);
+.sorting__button-form:hover {
+    fill: var(--basic-black);
+}
+
+.sorting__button-form:focus {
+    fill: var(--basic-red);
+}
+
+.sorting__button-form--up {
+    fill: var(--focus-grey);
+    transform: rotate(180deg);
 }
 
 
@@ -2169,7 +2168,7 @@ img {
     font-family: "Cuprum", Arial, sans-serif;
 }
 
-.catalog-card__buy_hidden {
+.catalog-card__buy--hidden {
     display: none;
 }
 
@@ -2202,7 +2201,7 @@ img {
     background-color: var(--success);
 }
 
-.catalog-card__buy-btn a:focus {
+.catalog-card__buy-btn a:active {
     background-color: var(--focus-green);
 }
 
@@ -2232,7 +2231,7 @@ img {
     border: 3px solid var(--dark-blue);
 }
 
-.catalog-card__bookmark-btn a:focus {
+.catalog-card__bookmark-btn a:active {
     opacity: 0.5;
 }
 
@@ -2258,7 +2257,7 @@ img {
     box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 50%);
 }
 
-.catalog__modal_pop-up {
+.catalog__modal--pop-up {
     display: none; 
 }
 
@@ -2330,9 +2329,8 @@ img {
 }
 
 .pagination-list {
-    display: grid;
+    display: flex;
     gap: 10px;
-    grid-template-columns: 38px 38px 38px 1fr;
 
     padding: 0;
     margin: 0;
@@ -2341,15 +2339,13 @@ img {
 }
 
 .pagination-list__item a {  
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
 
-    width: 38px;
-    height: 38px;
+    padding: 10px 15px 10px 15px;
 
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     line-height: 18px;
+    text-align: center;
     color: var(--basic-black);
     text-transform: uppercase;
     text-decoration: none;
@@ -2377,9 +2373,8 @@ img {
     border: 1px solid var(--basic-red);
 }
 
-.pagination-list__item_next a {
-    width: 140px;
-    height: 38px;
+.pagination-list__item--next a {
+    padding: 10px 32px 10px 32px;
 }
 
 
@@ -2429,12 +2424,12 @@ img {
     transform: rotate(45deg)
 }
 
-.new-mark_features {
+.new-mark--features {
     top: 9px;
     right: -24px;
 }
 
-.new-mark_catalog-card {
+.new-mark--catalog-card {
     top: -5px;
     right: -25px;
 }
@@ -2480,3 +2475,5 @@ img {
     border: none;
     cursor: pointer;    
 }
+
+
