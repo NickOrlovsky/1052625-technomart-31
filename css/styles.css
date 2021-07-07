@@ -105,8 +105,6 @@
     --logo-border-bottom: #B52933;
     --logo-border-bottom-active: #8D1E26;
 
-    /* --search-logo-gray: #69 */
-
     --success: #5FBB2D;
     --warning: #FFBF47;
     --error: #BA2732;
@@ -208,7 +206,7 @@ img {
     align-content: center;
     flex-wrap: wrap;
 
-    width: 940px;
+    max-width: 940px;
     min-height: 42px;
     margin: 0 auto;
     padding: 0 10px;
@@ -274,12 +272,13 @@ img {
 
 .header__form-search svg {
     position: absolute;
-    top: 13px;
-    left: 16px;
+    top: 11px;
+    left: 18px;
+    fill: white;
     opacity: 0.3;
 }
 
-.search-input:active + svg {
+.search-input:focus + svg {
     opacity: 1;
     fill: red;
 }
@@ -287,24 +286,6 @@ img {
 .header__form-search:hover svg {
     opacity: 1;
 }
-
-/* .header__form-search input:active svg {
-    opacity: 1;
-    fill: var(--basic-red);
-} */
-
-.header__input-wrapper {
-    
-}
-
-
-/* .search-input {
-    background-image: url("../img/icons/search.svg");
-    background-position: 16px 10px;
-    background-size: 19px;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-} */
 
 .search-input:focus {
     background-color: var(--basic-white);
@@ -376,6 +357,10 @@ img {
     opacity: 1;
 }
 
+.header__bookmarks-link:active::before {
+    opacity: 0.5;
+}
+
 .header__bookmarks--bin a {
     position: relative;
 
@@ -384,10 +369,10 @@ img {
     padding: 9px 26px 9px 49px;
 }
 
-.header__bookmarks--bin a::before {
+.header__bin-link::before {
     content: "";
     position: absolute;
-    top: 13px;
+    top: 12px;
     left: 26px;
 
     width: 15px;
@@ -396,6 +381,14 @@ img {
     background-position: 0 0;
     opacity: 0.3;
 
+}
+
+.header__bin-link:hover:before {
+    opacity: 1;
+}
+
+.header__bin-link:active:before {
+    opacity: 0.5;
 }
 
 .header__bookmarks a:active {
@@ -423,8 +416,6 @@ img {
 }
 
 .header__registration {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -433,11 +424,14 @@ img {
 }
 
 .header__registration p {
-    margin: 0;
-    margin-bottom: 36px;
+    /* margin: 0; */
+    margin-bottom: 40px;
 }
 
 .header__subject {
+    margin: 0;
+    margin-right: 93px;
+
     padding-left: 32px;
 
     font-size: 16px;
@@ -446,6 +440,7 @@ img {
     color: var(--basic-red);
     text-transform: none;
 }
+
 .header__contact-info {
     font-size: 14px;
     text-align: center;
@@ -464,7 +459,7 @@ img {
 
     display: inline-block;
 
-    padding: 7px 50px 8px 74px;
+    padding: 4px 44px 4px 74px;
 
     font-size: 21px;
     line-height: 31px;
@@ -486,7 +481,12 @@ img {
     background-position: 0 0;
 }
 
+.header__contact-info p {
+    margin-top: 2px;
+}
+
 .header__sign {
+    margin-left: auto;
     font-size: 21px;
     line-height: 21px;
     text-align: center;
@@ -511,9 +511,12 @@ img {
 }
 
 .header__login {
-    display: flex;
-
     max-width: 300px;
+}
+
+.header__login a {
+    display: inline-block;
+    background-color: var(--basic-white);
 }
 
 .header__login-account {
@@ -521,10 +524,40 @@ img {
 
     display: inline-block;
 
+    margin-bottom: 7px;
     padding: 12px 56px;
+
+    text-decoration: none;
+    background-color: var(--basic-white);
 }
 
-.header__login-account::before {
+.user-icon-svg {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    fill: var(--focus-grey);
+}
+
+.logout-icon-svg {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+
+    fill: var(--focus-grey);
+}
+
+.header__login-account:hover .user-icon-svg,
+.header__login-account:hover .logout-icon-svg {
+    fill: var(--basic-grey);
+}
+
+.header__login-account:active .user-icon-svg,
+.header__login-account:active .logout-icon-svg {
+    fill: var(--focus-grey);
+}
+
+/* .header__login-account::before {
     content: "";
     position: absolute;
     top: 12px;
@@ -551,15 +584,31 @@ img {
     background: url("../img/icons/logout.svg") no-repeat;
     background-position: 0 0;
     opacity: 0.3;
-}
+} */
 
 .header__login-enter {
     position: relative;
-    margin-right: 10px;
-    padding: 12px 27px 12px 45px;
+    /* margin-right: 10px; */
+    padding: 12px 31px 12px 46px;
 }
 
-.header__login-enter::before {
+.header__login-enter svg {
+    position: absolute;
+    top: 13px;
+    left: 19px;
+
+    fill: var(--focus-grey);
+}
+
+.header__login-enter:hover svg {
+    fill: var(--basic-grey);
+}
+
+.header__login-enter:active svg {
+    fill: var(--focus-grey);
+}
+
+/* .header__login-enter::before {
     content: "";
     position: absolute;
     top: 14px;
@@ -571,20 +620,11 @@ img {
     background: url("../img/icons/login.svg") no-repeat;
     background-position: 0 0;
     opacity: 0.3;
-}
+} */
 
 
 .header__login-register {
     padding: 12px 24px;
-}
-
-.header__login a {
-    display: inline-block;
-
-    margin-bottom: 7px;
-
-    text-decoration: none;
-    background-color: var(--basic-white);
 }
 
 .header__account-nav {
@@ -633,7 +673,7 @@ img {
 }
 
 .header__nav {
-    width: 940px;
+    max-width: 940px;
     padding: 0 10px;
     margin: 0 auto;
 }
@@ -676,8 +716,8 @@ img {
 /* ===========================Features======================== */
 
 .main-page {
-    padding-top: 61px;
-    padding-bottom: 70px;
+    padding-top: 58px;
+    padding-bottom: 71px;
 }
 
 .features {
@@ -793,12 +833,16 @@ img {
 }
 
 .features__button a {
-    display: flex;
+    display: inline-block;
+    
+    /* display: flex;
     justify-content: center;
     align-items: center;
 
     width: 135px;
-    height: 38px;
+    height: 38px; */
+
+    padding: 10px 26px;
 
     color: var(--basic-white);
     text-decoration: none;
@@ -905,7 +949,7 @@ img {
 
     
     padding: 25px 14px 26px 28px;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
     box-sizing: border-box;
 
     background-color: var(--headline-yellow);
@@ -1127,8 +1171,8 @@ img {
     grid-row: 2/3;
     
     box-sizing: border-box;
-    width: 240px;
-    height: 185px;
+    max-width: 240px;
+    min-height: 185px;
 
     background-color: var(--dark-blue);
 }
@@ -1149,7 +1193,7 @@ img {
 
 
 .services__options-nav a {
-    height: 61px;
+    /* height: 61px; */
 
     color: var(--basic-white);
     text-decoration: none;
@@ -1258,7 +1302,7 @@ img {
 }
 
 .company__info {
-    width: 460px;
+    max-width: 460px;
 }
 
 .company__info p, h3 {
@@ -1316,7 +1360,7 @@ img {
 }
 
 .company__contacts a {
-    display: block;
+    display: inline-block;
 
     padding: 11px 61.12px 9px 61.88px;
 
@@ -1397,8 +1441,8 @@ img {
 .company__modal {
     display: none;
 
-    height: 430px;
-    width: 620px;
+    max-height: 430px;
+    max-width: 620px;
     box-sizing: border-box;
 
     background-color: var(--basic-white);
@@ -1517,7 +1561,7 @@ img {
 
 .nav-list {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 
     padding: 0;
@@ -1525,6 +1569,14 @@ img {
     width: 546px;
     margin-bottom: 34px;
     list-style: none;
+}
+
+.nav-list__item {
+    margin-right: 58px;
+}
+
+.nav-list__item:last-of-type {
+    margin-right: 0;
 }
 
 .nav-list--colored {
@@ -2051,10 +2103,11 @@ img {
 }
 
 .filter__button {
-    width: 220px;
-    height: 38px;
+    /* width: 220px;
+    height: 38px; */
 
-    text-align: center;
+    padding: 10px 80px;
+
     text-transform: uppercase;
 
     background-color: var(--basic-white);
@@ -2070,7 +2123,7 @@ img {
     align-items: center;
     justify-content: space-between;
 
-    min-height: 38px;
+    max-height: 38px;
     padding-left: 19px;
     padding-right: 17px;
     margin-bottom: 28px;
@@ -2096,7 +2149,7 @@ img {
     /* justify-content: space-between; */
     flex-wrap: wrap;
 
-    width: 443px;
+    max-width: 443px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -2151,12 +2204,38 @@ img {
 }
 
 .sorting__button {
+    position: relative;
     background-color: inherit;
     border: none;
     padding: 0;
 }
 
-.sorting__button:hover svg {
+.sorting__triangle {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid var(--focus-grey);
+}
+
+.sorting__triangle--down {
+    position: absolute;
+    top: 12px;
+    left: -11px;
+
+    transform: rotate(180deg);
+}
+
+.sorting__button:hover .sorting__triangle {
+    border-bottom: 10px solid var(--basic-black);
+}
+
+.sorting__button:focus .sorting__triangle {
+    border-bottom: 10px solid var(--basic-red);
+}
+
+/* .sorting__button:hover svg {
     fill: red;
 }
 
@@ -2176,7 +2255,7 @@ img {
 .sorting__button-form--up {
     fill: var(--focus-grey);
     transform: rotate(180deg);
-}
+} 
 
 
 /* ===========================Catalog======================== */
@@ -2214,12 +2293,17 @@ img {
 }
 
 .catalog-card__buy-btn a {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
 
     width: 135px;
-    height: 35px;
+    height: 35px; */
+    position: relative;
+
+    display: inline-block;
+
+    padding: 8px 40px 4px 54px;
 
     font-size: 14px;
     color: var(--basic-white);
@@ -2239,6 +2323,15 @@ img {
     background-color: var(--focus-green);
 }
 
+.buy-btn-svg {
+    position: absolute;
+    top: 12px;
+    left: 31px;
+
+    fill: var(--basic-white);
+    opacity: 0.3;
+}
+
 .catalog-card__bookmark-btn {
     display: flex;
     justify-content: center;
@@ -2247,15 +2340,18 @@ img {
 }
 
 .catalog-card__bookmark-btn a {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     height: 32px;
-    width: 135px;
+    width: 135px; */
+
+    padding: 5px 31px 2px 30px;
 
     font-size: 14px;
     color: var(--dark-blue);
     text-decoration: none;
+    text-transform: uppercase;
 
     border: 3px solid var(--basic-green);
     border-radius: 2px;
@@ -2282,8 +2378,8 @@ img {
     grid-template-rows: 163px 112px;
     align-items: center;
 
-    width: 620px;
-    height: 279px;
+    max-width: 620px;
+    max-height: 279px;
     box-sizing: border-box;
 
     background-color: var(--basic-white);
@@ -2327,8 +2423,6 @@ img {
 }
 
 .catalog__checkout-btn a {
-    width: 192px;
-    height: 38px;
     padding: 11px 46px 9px 47px;
 
     color: var(--basic-white);
@@ -2338,8 +2432,6 @@ img {
 }
 
 .catalog__continue-btn a {
-    width: 192px;
-    height: 38px;
     padding: 11px 31px 9px 32px;
 
     color: var(--basic-black);
@@ -2483,8 +2575,9 @@ img {
 .modal-map {
     display: none;
 
-    width: 943px;
-    height: 442px;
+    max-width: 943px;
+    width: 100%;
+    max-height: 442px;
 
     border-top: 7px solid var(--basic-red);
     box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 50%);
