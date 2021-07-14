@@ -1187,22 +1187,32 @@ img {
 }
 
 .services__img-wrap {
-    position: absolute;
-    top: 22px;
-    right: 0;
+    position: relative;
 }
 
 .services__img-delivery {
+    position: absolute;
+    bottom: -152px;
+    left: 150px;
+    
     width: 468px;
     height: 261px;
 }
 
 .services__img-guarantee {
+    position: absolute;
+    bottom: -102px;
+    left: 239px;
+
     width: 389px;
     height: 283px;
 }
 
 .services__img-credit {
+    position: absolute;
+    bottom: -113px;
+    left: 164px;
+
     width: 465px;
     height: 285px;
 }
@@ -1218,12 +1228,24 @@ img {
     color: var(--dark-blue);
 }
 
+.services__option a {
+    display: inline-block;
+
+    padding: 10px 0px 10px 0px;
+    margin-top: 27px;
+    min-width: 195px;
+
+    text-decoration: none;
+    text-align: center;
+}
+
 .services__option-text p {
-    max-width: 300px;
+    max-width: 331px;
 }
 
 .services__option p {
     font-family: "PT Sans", Arial, sans-serif;
+   
 }
 
 /* ===========================Company======================== */
