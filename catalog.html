@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Каталог магазина "Техномарт"</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -17,7 +17,7 @@
             <div class="header__checkout-wrapper">
                 <h3 class="visually-hidden">Поиск</h3>
                 <div class="flex-container logo-search">
-                    <a class="header__logo-posion">
+                    <a href="index.html" class="header__logo-posion" aria-label="Логотип компании">
                         <div class="header__logo-wrapper">
                             <img src="img/main-logo-header.svg" width="107" height="17" alt="Красный логотип Техномарт"
                                 class="header__logo">
@@ -35,8 +35,8 @@
                     <p class="header__bookmarks">
                         <a href="#" class="header__bookmarks-link">Закладки: 0</a>
                     </p>
-                    <p class="header__bookmarks header__bookmarks--bin">
-                        <a href="#" class="header__bin-link">Корзина: 0</a>
+                    <p class="header__bookmarks header__bookmarks-bin header__bookmarks--buy">
+                        <a href="#" class="header__bin-link">Корзина: 10</a>
                     </p>
                     <p class="header__order">
                         <a href="#" class="header__order-link">Оформить заказ</a>
@@ -44,14 +44,13 @@
                 </div>
             </div>
         </div>
-        </div>
         <div class="header__registration container">
             <h3 class="visually-hidden">Вход/Регистрация</h3>
             <p class="header__subject">Интернет-магазин<br>
                 строительных материалов<br>
                 и инструментов для ремонта</p>
             <div class="header__contact-info">
-                <a href="tel:78005558628" class="header__tel">+7 800 555-86-28</a>
+                <a href="tel:+78005558628" class="header__tel">+7 800 555-86-28</a>
                 <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
             </div>
             <div class="header__sign">
@@ -178,7 +177,7 @@
                         </li>
                         <li class="filter__option filter-checkbox">
                             <input class="filter__input-checkbox filter-input visually-hidden" type="checkbox"
-                                name="dewalt" id="filter-dewalt" blocked>
+                                name="dewalt" id="filter-dewalt">
                             <label for="filter-dewalt">Dewalt</label>
                         </li>
                         <li class="filter__option filter-checkbox">
@@ -214,13 +213,10 @@
                     <li class="sorting__item"><a href="#">ПО ЦЕНЕ</a></li>
                     <li class="sorting__item"><a href="#">ПО ТИПУ</a></li>
                     <li class="sorting__item"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
-                    <li class="sorting__button-wrap">
-                        <button type="button" class="sorting__button" aria-label="Фильтр вверх">
-                            <div class="sorting__triangle"></div>
-                        </button>
-                        <button type="button" class="sorting__button" aria-label="Фильтр вниз">
-                            <div class="sorting__triangle sorting__triangle--down"></div>
-                        </button>
+                    <li class="sorting__triangle-wrap">
+                        <button type="button" class="sorting__triangle" aria-label="Фильтр вверх"></button>
+                        <button type="button" class="sorting__triangle sorting__triangle--down"
+                            aria-label="Фильтр вниз"></button>
                     </li>
                 </ul>
             </div>
@@ -427,7 +423,9 @@
                                 </svg>
                             </a>
                         </p>
-                        <a href="#" class="catalog-card__button">В закладки</a>
+                        <p class="catalog-card__bookmark-btn">
+                            <a href="#">В закладки</a>
+                        </p>
                     </div>
                     <a href="#" class="catalog-card__link">
                         <h4>Перфоратор BOSCH<br>BFG 6000</h4>
@@ -499,7 +497,7 @@
                     <img src="img/main-logo-footer.svg" width="220" height="68" alt="Большой красный логотип Техномарт">
                 </p>
                 <p class="footer__address-text">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>
-                    <a href="tel:78125550555" class="footer__tel">+7 800 555-86-28</a>
+                    <a href="tel:+78125550555" class="footer__tel">+7 800 555-86-28</a>
                 </p>
             </div>
             <nav class="footer__nav">
@@ -546,16 +544,16 @@
                     <ul class="footer__social-list">
                         <li class="footer__social-item">
                             <a href="#" class="social-link" aria-label="Вконтакте">
-                                <img src="img/social-icons/vk.svg" alt="логотип Вконтакте">
+                                <img src="img/social-icons/vk.svg" width="26" height="15" alt="логотип Вконтакте">
                             </a>
                         </li>
                         <li class="footer__social-item">
-                            <a href="#" class="social-link" aria-label="Фейсбук">
+                            <a href="#" class="social-link" width="12" height="22" aria-label="Фейсбук">
                                 <img src="img/social-icons/fb.svg" alt="логотип Фейсбук">
                             </a>
                         </li>
                         <li class="footer__social-item">
-                            <a href="#" class="social-link" aria-label="Инстаграм">
+                            <a href="#" class="social-link" width="21" height="21" aria-label="Инстаграм">
                                 <img src="img/social-icons/ig.svg" alt="логотип Инстаграм">
                             </a>
                         </li>

@@ -306,24 +306,23 @@ img {
     align-items: center;
 }
 
-.header__bookmarks {
-    position: relative;
-}
-
-.header__bookmarks a {
-    display: inline-block;
-
-    padding: 9px 27px 9px 40px;
-}
-
 .header__bookmarks-icon-wrap {
     position: absolute;
     top: 11px;
     left: 3px;
 }
 
+.header__bookmarks--buy {
+    background-color: var(--basic-red);
+}
+
 .header__bookmarks-link {
     position: relative;
+
+    display: inline-block;
+    vertical-align: inherit;
+
+    padding: 9px 27px 9px 40px;
 }
 
 .header__bookmarks-link::before {
@@ -349,12 +348,17 @@ img {
     opacity: 0.5;
 }
 
-.header__bookmarks--bin a {
+.header__bookmarks-bin a {
     position: relative;
 
     display: inline-block;
+    vertical-align: inherit;
 
-    padding: 9px 26px 9px 49px;
+    max-width: 150px;
+    width: 100%;
+
+    padding: 9px 21px 9px 49px;
+    box-sizing: border-box;
 }
 
 .header__bin-link::before {
@@ -387,6 +391,7 @@ img {
 
 .header__order a {
     display: inline-block;
+    vertical-align: inherit;
 
     padding: 9px 16px 9px 19px;
 
@@ -445,6 +450,7 @@ img {
     position: relative;
 
     display: inline-block;
+    vertical-align: inherit;
 
     padding: 4px 44px 4px 70px;
 
@@ -503,6 +509,7 @@ img {
 
 .header__login a {
     display: inline-block;
+    vertical-align: inherit;
     background-color: var(--basic-white);
 }
 
@@ -510,6 +517,7 @@ img {
     position: relative;
 
     display: inline-block;
+    vertical-align: inherit;
 
     margin-bottom: 7px;
     padding: 12px 56px;
@@ -581,6 +589,7 @@ img {
 .header__account-nav a {
     position: relative;
     display: inline-block;
+    vertical-align: inherit;
 
     margin-right: 12px;
     padding-right: 20px;
@@ -782,6 +791,7 @@ img {
 
 .features__link {
     display: inline-block;
+    vertical-align: inherit;
 
     padding: 10px 0px 10px 0px;
     min-width: 135px;
@@ -859,6 +869,7 @@ img {
 
 .slider-btn-wrap a {
     display: inline-block;
+    vertical-align: inherit;
 
     padding: 11px 46px 9px 46px;
 
@@ -930,6 +941,7 @@ img {
 
 .section__header-button a {
     display: inline-block; 
+    vertical-align: inherit;
 
     padding: 11px 0px 9px 0px;
     min-width: 192px;
@@ -963,6 +975,23 @@ img {
     border: 1px solid var(--border-grey);
     overflow: hidden;
 }
+
+.catalog-card:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.catalog-card:hover .catalog-card__img-wrapper {
+    display: none;
+}
+
+.catalog-card:hover .catalog-card__buy--hidden {
+    display: block;
+}
+
+.catalog-card--main-page:hover .catalog-card__img-wrapper {
+    display: flex;
+}
+
 
 .catalog-card:nth-child(3n) {
     margin-right: 0;
@@ -999,6 +1028,7 @@ img {
     margin-bottom: 12px;
 
     font-size: 17px;
+    font-weight: 700;
     line-height: 18px;
     color: var(--pale-grey);
     text-decoration: line-through;
@@ -1194,7 +1224,7 @@ img {
     position: absolute;
     bottom: -152px;
     left: 150px;
-    
+
     width: 468px;
     height: 261px;
 }
@@ -1230,6 +1260,7 @@ img {
 
 .services__option a {
     display: inline-block;
+    vertical-align: inherit;
 
     padding: 10px 0px 10px 0px;
     margin-top: 27px;
@@ -1284,6 +1315,7 @@ img {
 
 .company__info a {
     display: inline-block;
+    vertical-align: inherit;
 
     padding: 11px 0px 9px 0px;
     min-width: 220px;
@@ -1292,11 +1324,11 @@ img {
     text-decoration: none;
 }
 
-.company__info-text p {
+.company__info p {
     margin-bottom: 26px;
 }
 
-.company__info-text p:last-child {
+.company__info p:last-of-type {
     margin-bottom: 0;
     max-width: 385px;
 }
@@ -1332,6 +1364,7 @@ img {
 
 .company__contacts a {
     display: inline-block;
+    vertical-align: inherit;
 
    padding: 11px 0px 9px 0px;
     min-width: 300px;
@@ -1714,8 +1747,10 @@ img {
 }
 
 .breadcrumbs__item a {
-    display: inline-block;
     position: relative;
+
+    display: inline-block;
+    vertical-align: inherit;
 
     margin-right: 15px;
     padding-right: 25px;
@@ -2125,25 +2160,22 @@ img {
     border: none;
 }
 
-.sorting__button-wrap {
+.sorting__triangle-wrap {
     position: relative;
-    display: flex;
-    justify-content: space-between;
 
     width: 43px;
 }
 
-.sorting__button {
-    position: relative;
-    background-color: inherit;
-    border: none;
-    padding: 0;
-}
 
 .sorting__triangle {
     position: absolute;
     top: 12px;
-    left: 0px;
+    left: 0px; 
+
+    border: none;
+    padding: 0;
+
+    background-color: inherit;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-bottom: 10px solid var(--focus-grey);
@@ -2152,28 +2184,18 @@ img {
 .sorting__triangle--down {
     position: absolute;
     top: 12px;
-    left: -11px;
+    left: 32px;
 
     transform: rotate(180deg);
 }
 
-.sorting__button:hover .sorting__triangle {
+.sorting__triangle:hover {
     border-bottom: 10px solid var(--basic-black);
 }
 
-.sorting__button:focus .sorting__triangle {
+.sorting__triangle:focus {
     border-bottom: 10px solid var(--basic-red);
 }
-
-.sorting__button-form:focus {
-    fill: var(--basic-red);
-}
-
-.sorting__button-form--up {
-    fill: var(--focus-grey);
-    transform: rotate(180deg);
-} 
-
 
 /* ===========================Catalog======================== */
 
@@ -2215,6 +2237,7 @@ img {
     position: relative;
 
     display: inline-block;
+    vertical-align: inherit;
 
     padding: 8px 40px 4px 54px;
 
