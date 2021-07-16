@@ -469,16 +469,16 @@
     <h3 class="visually-hidden">Форма обратной связи</h3>
     <form class="company__form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="company__form-item form-name">
-        <label class="company__form-label">Ваше имя:</label>
-        <input type="text" name="name" placeholder="Имя Фамилия">
+        <label class="company__form-label" for="name-surname">Ваше имя:</label>
+        <input type="text" name="name" placeholder="Имя Фамилия" id="name-surname">
       </fieldset>
       <fieldset class="company__form-item form-email">
-        <label class=" company__form-label">Ваш e-mail:</label>
-        <input type="email" name="email" placeholder="email@example.com">
+        <label class=" company__form-label" for="email">Ваш e-mail:</label>
+        <input type="email" name="email" placeholder="email@example.com" id="email">
       </fieldset>
       <fieldset class="company__form-item textarea">
-        <label class="company__form-label">Текст письма:</label>
-        <textarea name="letter-text">В свободной форме</textarea>
+        <label class="company__form-label" for="text">Текст письма:</label>
+        <textarea name="letter-text" id="text">В свободной форме</textarea>
       </fieldset>
       <div class="button-area">
         <button type="submit" class="button button-modal">Отправить</button>
