@@ -1387,12 +1387,16 @@ img {
     max-width: 180px;
 }
 
+.feedback-btn {
+
+}
+
 .company__map {
     margin: 0;
     margin-bottom: 15px;
 }
 
-.company__map a {
+.company__map-link {
     padding: 0;
 }
 
@@ -2508,6 +2512,11 @@ img {
     box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 50%);
 }
 
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
 .modal-map iframe {
     border: none;
 }
@@ -2520,6 +2529,7 @@ img {
     
     width: 21px;
     height: 21px;
+    padding: 10px;
     
     background: url("../img/icons/close.svg") no-repeat;
     background-position: 0 0;
@@ -2527,4 +2537,22 @@ img {
     cursor: pointer;    
 }
 
+/* Animations */
 
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
